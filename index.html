@@ -182,7 +182,7 @@
   </div>
 
 <script type="module">
-const APP_BUILD = '26_11_23_06';
+const APP_BUILD = '26_11_23_07';
 
 /* =====================================================================
    설정 — 여기만 고치면 됩니다
@@ -1999,9 +1999,14 @@ function renderStatusTab(ps){
         <button type="button" id="stxl" class="${BTN.sm}"><i data-lucide="table" class="w-3.5 h-3.5"></i><span>현황표 엑셀 (서류별)</span></button>
         <button type="button" id="svpdf" class="${BTN.sm}"><i data-lucide="file-text" class="w-3.5 h-3.5"></i><span>문답표 PDF (사번순)</span></button>
       </div>
-      <button type="button" id="zipall" class="text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl bg-blue-700 hover:bg-blue-800 text-white transition shadow-sm inline-flex items-center gap-1.5">
-        <i data-lucide="archive" class="w-4 h-4"></i><span>${selN ? `선택 ${selN}명 서류 ZIP 받기` : '목록 전체 서류 ZIP 받기'}</span></button>
+      <div class="flex items-center gap-2 flex-wrap">
+        <button type="button" id="pcsave" class="hidden md:inline-flex text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl border border-blue-200 bg-blue-50/60 hover:bg-blue-50 text-blue-700 transition shadow-sm items-center gap-1.5" title="고른 PC 폴더에 서류 파일과 문답표 PDF를 바로 저장해요. 다시 누르면 새로 들어오거나 바뀐 것만 저장해요. (PC Chrome·Edge)">
+          <i data-lucide="folder-down" class="w-4 h-4"></i><span>${selN ? `선택 ${selN}명 PC 폴더에 저장` : '목록 전체 PC 폴더에 저장'}</span></button>
+        <button type="button" id="zipall" class="text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl bg-blue-700 hover:bg-blue-800 text-white transition shadow-sm inline-flex items-center gap-1.5">
+          <i data-lucide="archive" class="w-4 h-4"></i><span>${selN ? `선택 ${selN}명 서류 ZIP 받기` : '목록 전체 서류 ZIP 받기'}</span></button>
+      </div>
     </div>
+    <p id="pcdir" class="hidden md:block text-[11px] text-slate-500 -mt-2 empty:hidden"></p>
     <p id="zipst" class="text-xs font-semibold text-slate-500 -mt-2 empty:hidden"></p>
     <div class="hidden md:block bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden"><div class="tbl-scroll">
       <table class="w-full text-left border-collapse text-sm">
@@ -2085,6 +2090,11 @@ function renderStatusTab(ps){
     } catch (e) { console.error(e); toast('PDF 만들기 실패: ' + e.message); st.textContent = ''; }
     btn.disabled = false;
   };
+  $('#pcsave').onclick = () => {
+    if (selN) return saveToPcFolder(ps.filter(p => AD.sel.has(p.key)));
+    saveToPcFolder(list);
+  };
+  pcDirLine();
   $('#zipall').onclick = () => {
     if (selN) { const who = ps.filter(p => AD.sel.has(p.key)); return downloadZip(who, `연말정산_${CONFIG.year}_선택_${who.length}명.zip`); }
     downloadZip(list, `연말정산_${CONFIG.year}${AD.corp ? '_' + AD.corp : ''}${AD.dept ? '_' + AD.dept : ''}.zip`);
@@ -2501,6 +2511,124 @@ async function downloadZip(ps, zipName){
   if (st) st.textContent = '압축 중…';
   saveBlob(await zip.generateAsync({type:'blob'}), zipName);
   if (st) st.textContent = fail ? `완료 (실패 ${fail}개 — CORS 설정 확인)` : '완료';
+}
+
+/* ---------- PC 폴더에 저장 (26_11_23_07) ----------
+   PC Chrome·Edge의 폴더 선택(File System Access API)으로 한 번 고른 폴더에 ZIP과 같은 구조로 바로 저장:
+   법인/소속/사번_이름/서류 종류/파일, 법인/소속/사번_이름/문답표/사번_이름_문답표.pdf
+   고른 폴더는 이 브라우저(IndexedDB)에 기억. 폴더 맨 위 _저장기록.json으로 이미 저장한 파일은 건너뛰고,
+   문답표는 내용이 바뀐 사람만 다시 저장. 사이트에서 지운 파일은 PC에서 지우지 않음. */
+const PCFS = { key: () => `ye_pcdir_${CONFIG.year}`, log: '_저장기록.json', busy: false };
+function pcIdb(){
+  return new Promise((res, rej) => {
+    const r = indexedDB.open('ye_fs', 1);
+    r.onupgradeneeded = () => r.result.createObjectStore('h');
+    r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error);
+  });
+}
+async function pcHandle(set){
+  try {
+    const db = await pcIdb();
+    return await new Promise((res, rej) => {
+      const tx = db.transaction('h', set === undefined ? 'readonly' : 'readwrite'), os = tx.objectStore('h');
+      const r = set === undefined ? os.get(PCFS.key()) : (set ? os.put(set, PCFS.key()) : os.delete(PCFS.key()));
+      r.onsuccess = () => res(set === undefined ? r.result || null : set); r.onerror = () => rej(r.error);
+    });
+  } catch (e) { console.error(e); return null; }
+}
+async function pcDirLine(){
+  const el = $('#pcdir'); if (!el) return;
+  if (!window.showDirectoryPicker) { el.textContent = ''; return; }
+  const h = await pcHandle();
+  if (!$('#pcdir')) return;
+  el.innerHTML = h ? `PC 저장 폴더: <strong class="text-slate-700">${esc(h.name)}</strong> · <button type="button" id="pcpick" class="font-bold text-blue-700 underline">폴더 바꾸기</button>` : '';
+  const b = $('#pcpick'); if (b) b.onclick = async () => { const n = await pcPickDir(); if (n) toast(`저장 폴더를 「${n.name}」(으)로 바꿨어요`); pcDirLine(); };
+}
+async function pcPickDir(){
+  try {
+    const h = await window.showDirectoryPicker({id: 'ye-pc', mode: 'readwrite'});
+    await pcHandle(h); return h;
+  } catch (e) {
+    if (e && e.name === 'AbortError') return null;
+    console.error(e); toast('폴더를 고를 수 없어요: ' + (e.message || e)); return null;
+  }
+}
+async function pcPerm(h){
+  if (!h.queryPermission) return true;
+  const o = {mode: 'readwrite'};
+  if (await h.queryPermission(o) === 'granted') return true;
+  return (await h.requestPermission(o)) === 'granted';
+}
+async function pcDir(root, parts){ let d = root; for (const n of parts) d = await d.getDirectoryHandle(n, {create: true}); return d; }
+async function pcExists(dir, name){ try { await dir.getFileHandle(name); return true; } catch { return false; } }
+async function pcWrite(dir, name, blob){
+  const fh = await dir.getFileHandle(name, {create: true});
+  const w = await fh.createWritable(); await w.write(blob); await w.close();
+}
+async function pcReadLog(root){
+  try { const f = await (await root.getFileHandle(PCFS.log)).getFile(); const j = JSON.parse(await f.text()); return {files: j.files || {}, surveys: j.surveys || {}}; }
+  catch { return {files: {}, surveys: {}}; }
+}
+async function pcWriteLog(root, log){
+  await pcWrite(root, PCFS.log, new Blob([JSON.stringify({v: 1, year: CONFIG.year, savedAt: new Date().toISOString(), ...log}, null, 1)], {type: 'application/json'}));
+}
+async function saveToPcFolder(ps){
+  if (!window.showDirectoryPicker) return toast('이 브라우저는 PC 폴더 저장이 안 돼요. PC의 Chrome이나 Edge에서 써 주세요');
+  if (PCFS.busy) return toast('지금 저장 중이에요. 끝나면 다시 눌러 주세요');
+  const files = ps.flatMap(p => p.files.map(f => ({p, f})));
+  const svPeople = ps.filter(p => p.sub?.survey).sort(empOrder);
+  if (!files.length && !svPeople.length) return toast('저장할 파일이 없어요');
+  let root = await pcHandle();
+  try { if (root && !(await pcPerm(root))) root = null; } catch (e) { console.error(e); root = null; }
+  if (!root) { root = await pcPickDir(); if (!root) return; if (!(await pcPerm(root))) return toast('폴더에 저장할 권한이 없어요. 다시 눌러서 허용해 주세요'); }
+  pcDirLine();
+  PCFS.busy = true;
+  const st = $('#zipst'), btn = $('#pcsave'); if (btn) btn.disabled = true;
+  const say = t => { const e = $('#zipst'); if (e) e.textContent = t; };
+  const clean = s => String(s || '미지정').replace(/[\\/:*?"<>|]/g, '').replace(/[. ]+$/, '') || '미지정';
+  const log = await pcReadLog(root);
+  let saved = 0, skip = 0, fail = 0, svSaved = 0, svSkip = 0, n = 0;
+  try {
+    for (const {p, f} of files) {
+      n++; say(`PC 폴더에 저장 중 ${n}/${files.length}`);
+      try {
+        const old = log.files[f.id];
+        if (old) {
+          const parts = old.split('/'), name = parts.pop();
+          if (await pcExists(await pcDir(root, parts), name)) { skip++; continue; }
+        }
+        const parts = [clean(p.corp), clean(p.dept), `${clean(p.empNo || '')}_${clean(p.name)}`, clean(catLabel(f.category))];
+        const dir = await pcDir(root, parts);
+        const taken = new Set(Object.entries(log.files).filter(([k]) => k !== f.id).map(([, v]) => v));
+        let name = clean(f.fileName), i = 1;
+        while (taken.has([...parts, name].join('/')) || await pcExists(dir, name)) name = clean(f.fileName).replace(/(\.[^.]+)?$/, ext => `(${i++})${ext || ''}`);
+        await pcWrite(dir, name, await api.fileBlob(f));
+        log.files[f.id] = [...parts, name].join('/'); saved++;
+        if (saved % 20 === 0) await pcWriteLog(root, log);
+      } catch (e) { console.error(e); fail++; }
+    }
+    if (svPeople.length) {
+      let libs = null, m = 0;
+      for (const p of svPeople) {
+        m++; say(`문답표 PDF 저장 중 ${m}/${svPeople.length}`);
+        try {
+          const sub = p.sub, stamp = [sub.surveyAt || 0, sub.surveySubmittedAt || 0, sub.surveySubmitted ? 1 : 0, (sub.memo || '').length].join('|');
+          const base = `${clean(p.empNo || '')}_${clean(p.name)}`, parts = [clean(p.corp), clean(p.dept), base, '문답표'], name = `${base}_문답표.pdf`;
+          const dir = await pcDir(root, parts), prev = log.surveys[p.key];
+          if (prev && prev.stamp === stamp && prev.path === [...parts, name].join('/') && await pcExists(dir, name)) { svSkip++; continue; }
+          libs = libs || await pdfLibs();
+          const doc = new libs.jsPDF({unit: 'mm', format: 'a4'});
+          await surveyPdfPages(doc, p, libs, true);
+          await pcWrite(dir, name, doc.output('blob'));
+          log.surveys[p.key] = {stamp, path: [...parts, name].join('/')}; svSaved++;
+        } catch (e) { console.error(e); fail++; }
+      }
+    }
+    await pcWriteLog(root, log);
+    const msg = `「${root.name}」 폴더에 저장 완료 · 새 파일 ${saved}개, 문답표 ${svSaved}명` + (skip + svSkip ? ` · 이미 저장돼 있어 건너뜀 ${skip + svSkip}개` : '') + (fail ? ` · 실패 ${fail}개 (CORS·권한 확인)` : '');
+    say(msg); toast(fail ? `저장했지만 실패 ${fail}개가 있어요` : 'PC 폴더에 저장했어요');
+  } catch (e) { console.error(e); say(''); toast('PC 폴더 저장 실패: ' + (e.message || e)); }
+  finally { PCFS.busy = false; const b = $('#pcsave'); if (b) b.disabled = false; }
 }
 
 /* ---------- 현황표 엑셀 (업무자동변환 사이트 현황표 입력용, 2026-11-20 확정 양식) ----------
