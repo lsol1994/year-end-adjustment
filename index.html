@@ -15,7 +15,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" integrity="sha384-vtjasyidUo0kW94K5MXDXntzOJpQgBKXmE7e2Ga4LG0skTTLeBi97eFAXsqewJjw" crossorigin="anonymous"></script>
 
   <!-- 화면 스타일: Tailwind CSS 3을 미리 만들어 넣음 (외부 Tailwind CDN 안 씀). 디자인 클래스를 새로 추가하면 다시 만들어야 함 -->
-  <style>*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:Pretendard Variable,Pretendard,-apple-system,BlinkMacSystemFont,sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0}.inset-x-0{left:0;right:0}.bottom-0{bottom:0}.bottom-\[-10px\]{bottom:-10px}.left-1\/2{left:50%}.left-\[9px\]{left:9px}.top-0{top:0}.top-5{top:1.25rem}.top-7{top:1.75rem}.z-10{z-index:10}.z-30{z-index:30}.z-50{z-index:50}.z-\[70\]{z-index:70}.col-span-2{grid-column:span 2/span 2}.-mx-5{margin-left:-1.25rem;margin-right:-1.25rem}.mx-auto{margin-left:auto;margin-right:auto}.-mb-5{margin-bottom:-1.25rem}.-ml-2{margin-left:-.5rem}.-mt-2{margin-top:-.5rem}.mb-1{margin-bottom:.25rem}.mb-1\.5{margin-bottom:.375rem}.mb-2{margin-bottom:.5rem}.mb-2\.5{margin-bottom:.625rem}.mb-3{margin-bottom:.75rem}.mb-3\.5{margin-bottom:.875rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.ml-1{margin-left:.25rem}.ml-1\.5{margin-left:.375rem}.ml-2{margin-left:.5rem}.mr-1{margin-right:.25rem}.mr-1\.5{margin-right:.375rem}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-1\.5{margin-top:.375rem}.mt-2{margin-top:.5rem}.mt-2\.5{margin-top:.625rem}.mt-3{margin-top:.75rem}.mt-3\.5{margin-top:.875rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-6{margin-top:1.5rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.table{display:table}.grid{display:grid}.hidden{display:none}.h-1\.5{height:.375rem}.h-14{height:3.5rem}.h-16{height:4rem}.h-2{height:.5rem}.h-2\.5{height:.625rem}.h-3{height:.75rem}.h-3\.5{height:.875rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-8{height:2rem}.h-full{height:100%}.max-h-\[65vh\]{max-height:65vh}.max-h-\[75vh\]{max-height:75vh}.min-h-screen{min-height:100vh}.w-1\.5{width:.375rem}.w-10{width:2.5rem}.w-14{width:3.5rem}.w-16{width:4rem}.w-20{width:5rem}.w-3{width:.75rem}.w-3\.5{width:.875rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-8{width:2rem}.w-\[2px\]{width:2px}.w-full{width:100%}.min-w-0{min-width:0}.min-w-\[26px\]{min-width:26px}.max-w-6xl{max-width:72rem}.max-w-\[260px\]{max-width:260px}.max-w-\[92vw\]{max-width:92vw}.max-w-full{max-width:100%}.max-w-lg{max-width:32rem}.max-w-md{max-width:28rem}.max-w-sm{max-width:24rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.border-collapse{border-collapse:collapse}.-translate-x-1\/2{--tw-translate-x:-50%}.-translate-x-1\/2,.-translate-y-2{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-2{--tw-translate-y:-0.5rem}.translate-y-0{--tw-translate-y:0px}.transform,.translate-y-0{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes spin{to{transform:rotate(1turn)}}.animate-spin{animation:spin 1s linear infinite}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;-moz-user-select:none;user-select:none}.resize-y{resize:vertical}.resize{resize:both}.list-inside{list-style-position:inside}.list-decimal{list-style-type:decimal}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-\[44px_1fr\]{grid-template-columns:44px 1fr}.grid-cols-\[minmax\(120px\2c auto\)_1fr\]{grid-template-columns:minmax(120px,auto) 1fr}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-1\.5{gap:.375rem}.gap-2{gap:.5rem}.gap-2\.5{gap:.625rem}.gap-3{gap:.75rem}.gap-3\.5{gap:.875rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-x-2\.5{-moz-column-gap:.625rem;column-gap:.625rem}.gap-x-3{-moz-column-gap:.75rem;column-gap:.75rem}.gap-x-4{-moz-column-gap:1rem;column-gap:1rem}.gap-y-1{row-gap:.25rem}.gap-y-2{row-gap:.5rem}.space-y-1>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.25rem*var(--tw-space-y-reverse))}.space-y-1\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.375rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.375rem*var(--tw-space-y-reverse))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-2\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.625rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.625rem*var(--tw-space-y-reverse))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.space-y-5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem*var(--tw-space-y-reverse))}.space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem*var(--tw-space-y-reverse))}.divide-x>:not([hidden])~:not([hidden]){--tw-divide-x-reverse:0;border-right-width:calc(1px*var(--tw-divide-x-reverse));border-left-width:calc(1px*(1 - var(--tw-divide-x-reverse)))}.divide-y>:not([hidden])~:not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px*(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px*var(--tw-divide-y-reverse))}.divide-slate-100>:not([hidden])~:not([hidden]){--tw-divide-opacity:1;border-color:rgb(241 245 249/var(--tw-divide-opacity,1))}.divide-slate-200>:not([hidden])~:not([hidden]){--tw-divide-opacity:1;border-color:rgb(226 232 240/var(--tw-divide-opacity,1))}.self-start{align-self:flex-start}.overflow-auto{overflow:auto}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.truncate{overflow:hidden;text-overflow:ellipsis}.truncate,.whitespace-nowrap{white-space:nowrap}.break-all{word-break:break-all}.rounded{border-radius:.25rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.rounded-xl{border-radius:.75rem}.rounded-b-3xl{border-bottom-right-radius:1.5rem;border-bottom-left-radius:1.5rem}.rounded-t-3xl{border-top-left-radius:1.5rem;border-top-right-radius:1.5rem}.border{border-width:1px}.border-2{border-width:2px}.border-4{border-width:4px}.border-y{border-top-width:1px}.border-b,.border-y{border-bottom-width:1px}.border-b-2{border-bottom-width:2px}.border-l-\[3px\]{border-left-width:3px}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.border-\[\#0F172A\]{--tw-border-opacity:1;border-color:rgb(15 23 42/var(--tw-border-opacity,1))}.border-amber-200{--tw-border-opacity:1;border-color:rgb(253 230 138/var(--tw-border-opacity,1))}.border-amber-200\/70{border-color:hsla(48,97%,77%,.7)}.border-amber-200\/80{border-color:hsla(48,97%,77%,.8)}.border-amber-400\/30{border-color:rgba(251,191,36,.3)}.border-amber-500\/40{border-color:rgba(245,158,11,.4)}.border-blue-100{--tw-border-opacity:1;border-color:rgb(219 234 254/var(--tw-border-opacity,1))}.border-blue-200{--tw-border-opacity:1;border-color:rgb(191 219 254/var(--tw-border-opacity,1))}.border-blue-200\/60{border-color:rgba(191,219,254,.6)}.border-blue-200\/70{border-color:rgba(191,219,254,.7)}.border-blue-200\/80{border-color:rgba(191,219,254,.8)}.border-blue-400\/30{border-color:rgba(96,165,250,.3)}.border-blue-600\/80{border-color:rgba(37,99,235,.8)}.border-blue-700{--tw-border-opacity:1;border-color:rgb(29 78 216/var(--tw-border-opacity,1))}.border-emerald-200{--tw-border-opacity:1;border-color:rgb(167 243 208/var(--tw-border-opacity,1))}.border-emerald-200\/70{border-color:rgba(167,243,208,.7)}.border-orange-200{--tw-border-opacity:1;border-color:rgb(254 215 170/var(--tw-border-opacity,1))}.border-orange-200\/70{border-color:hsla(32,98%,83%,.7)}.border-orange-200\/80{border-color:hsla(32,98%,83%,.8)}.border-rose-100{--tw-border-opacity:1;border-color:rgb(255 228 230/var(--tw-border-opacity,1))}.border-rose-200{--tw-border-opacity:1;border-color:rgb(254 205 211/var(--tw-border-opacity,1))}.border-rose-200\/70{border-color:rgba(254,205,211,.7)}.border-rose-200\/80{border-color:rgba(254,205,211,.8)}.border-rose-300{--tw-border-opacity:1;border-color:rgb(253 164 175/var(--tw-border-opacity,1))}.border-rose-400{--tw-border-opacity:1;border-color:rgb(251 113 133/var(--tw-border-opacity,1))}.border-rose-400\/40{border-color:rgba(251,113,133,.4)}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249/var(--tw-border-opacity,1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240/var(--tw-border-opacity,1))}.border-slate-200\/70{border-color:rgba(226,232,240,.7)}.border-slate-200\/80{border-color:rgba(226,232,240,.8)}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225/var(--tw-border-opacity,1))}.border-slate-400\/30{border-color:rgba(148,163,184,.3)}.border-slate-800\/80{border-color:rgba(30,41,59,.8)}.border-transparent{border-color:transparent}.border-white\/15{border-color:hsla(0,0%,100%,.15)}.border-l-slate-200{--tw-border-opacity:1;border-left-color:rgb(226 232 240/var(--tw-border-opacity,1))}.bg-\[\#0F172A\]{--tw-bg-opacity:1;background-color:rgb(15 23 42/var(--tw-bg-opacity,1))}.bg-amber-400{--tw-bg-opacity:1;background-color:rgb(251 191 36/var(--tw-bg-opacity,1))}.bg-amber-50{--tw-bg-opacity:1;background-color:rgb(255 251 235/var(--tw-bg-opacity,1))}.bg-amber-50\/70{background-color:rgba(255,251,235,.7)}.bg-amber-500\/25{background-color:rgba(245,158,11,.25)}.bg-amber-600{--tw-bg-opacity:1;background-color:rgb(217 119 6/var(--tw-bg-opacity,1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255/var(--tw-bg-opacity,1))}.bg-blue-50\/40{background-color:rgba(239,246,255,.4)}.bg-blue-50\/60{background-color:rgba(239,246,255,.6)}.bg-blue-50\/70{background-color:rgba(239,246,255,.7)}.bg-blue-50\/80{background-color:rgba(239,246,255,.8)}.bg-blue-500\/20{background-color:rgba(59,130,246,.2)}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235/var(--tw-bg-opacity,1))}.bg-blue-700{--tw-bg-opacity:1;background-color:rgb(29 78 216/var(--tw-bg-opacity,1))}.bg-emerald-100{--tw-bg-opacity:1;background-color:rgb(209 250 229/var(--tw-bg-opacity,1))}.bg-emerald-400{--tw-bg-opacity:1;background-color:rgb(52 211 153/var(--tw-bg-opacity,1))}.bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245/var(--tw-bg-opacity,1))}.bg-emerald-50\/50{background-color:rgba(236,253,245,.5)}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129/var(--tw-bg-opacity,1))}.bg-orange-50{--tw-bg-opacity:1;background-color:rgb(255 247 237/var(--tw-bg-opacity,1))}.bg-orange-50\/90{background-color:rgba(255,247,237,.9)}.bg-rose-100{--tw-bg-opacity:1;background-color:rgb(255 228 230/var(--tw-bg-opacity,1))}.bg-rose-50{--tw-bg-opacity:1;background-color:rgb(255 241 242/var(--tw-bg-opacity,1))}.bg-rose-50\/50{background-color:rgba(255,241,242,.5)}.bg-rose-50\/60{background-color:rgba(255,241,242,.6)}.bg-rose-50\/70{background-color:rgba(255,241,242,.7)}.bg-rose-500{--tw-bg-opacity:1;background-color:rgb(244 63 94/var(--tw-bg-opacity,1))}.bg-rose-500\/30{background-color:rgba(244,63,94,.3)}.bg-rose-600{--tw-bg-opacity:1;background-color:rgb(225 29 72/var(--tw-bg-opacity,1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249/var(--tw-bg-opacity,1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240/var(--tw-bg-opacity,1))}.bg-slate-200\/70{background-color:rgba(226,232,240,.7)}.bg-slate-200\/80{background-color:rgba(226,232,240,.8)}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252/var(--tw-bg-opacity,1))}.bg-slate-50\/50{background-color:rgba(248,250,252,.5)}.bg-slate-50\/60{background-color:rgba(248,250,252,.6)}.bg-slate-50\/70{background-color:rgba(248,250,252,.7)}.bg-slate-50\/90{background-color:rgba(248,250,252,.9)}.bg-slate-500\/30{background-color:rgba(100,116,139,.3)}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42/var(--tw-bg-opacity,1))}.bg-slate-900\/50{background-color:rgba(15,23,42,.5)}.bg-slate-900\/95{background-color:rgba(15,23,42,.95)}.bg-slate-950\/80{background-color:rgba(2,6,23,.8)}.bg-transparent{background-color:transparent}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.bg-white\/10{background-color:hsla(0,0%,100%,.1)}.bg-white\/95{background-color:hsla(0,0%,100%,.95)}.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}.from-blue-600{--tw-gradient-from:#2563eb var(--tw-gradient-from-position);--tw-gradient-to:rgba(37,99,235,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.via-rose-500{--tw-gradient-to:rgba(244,63,94,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#f43f5e var(--tw-gradient-via-position),var(--tw-gradient-to)}.to-indigo-600{--tw-gradient-to:#4f46e5 var(--tw-gradient-to-position)}.to-rose-600{--tw-gradient-to:#e11d48 var(--tw-gradient-to-position)}.object-contain{-o-object-fit:contain;object-fit:contain}.p-0{padding:0}.p-1{padding:.25rem}.p-1\.5{padding:.375rem}.p-2{padding:.5rem}.p-3\.5{padding:.875rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-1{padding-left:.25rem;padding-right:.25rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-2\.5{padding-left:.625rem;padding-right:.625rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-3\.5{padding-left:.875rem;padding-right:.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-3\.5{padding-top:.875rem;padding-bottom:.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-0\.5{padding-bottom:.125rem}.pb-12{padding-bottom:3rem}.pb-14{padding-bottom:3.5rem}.pb-2{padding-bottom:.5rem}.pb-24{padding-bottom:6rem}.pb-5{padding-bottom:1.25rem}.pl-2{padding-left:.5rem}.pl-3{padding-left:.75rem}.pl-4{padding-left:1rem}.pr-2{padding-right:.5rem}.pr-4{padding-right:1rem}.pt-1{padding-top:.25rem}.pt-10{padding-top:2.5rem}.pt-2{padding-top:.5rem}.pt-2\.5{padding-top:.625rem}.pt-3{padding-top:.75rem}.pt-4{padding-top:1rem}.pt-6{padding-top:1.5rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.align-middle{vertical-align:middle}.font-mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-\[11\.5px\]{font-size:11.5px}.text-\[11px\]{font-size:11px}.text-\[13px\]{font-size:13px}.text-\[15px\]{font-size:15px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.tracking-tight{letter-spacing:-.025em}.text-amber-200{--tw-text-opacity:1;color:rgb(253 230 138/var(--tw-text-opacity,1))}.text-amber-600{--tw-text-opacity:1;color:rgb(217 119 6/var(--tw-text-opacity,1))}.text-amber-700{--tw-text-opacity:1;color:rgb(180 83 9/var(--tw-text-opacity,1))}.text-amber-800{--tw-text-opacity:1;color:rgb(146 64 14/var(--tw-text-opacity,1))}.text-amber-900{--tw-text-opacity:1;color:rgb(120 53 15/var(--tw-text-opacity,1))}.text-blue-200{--tw-text-opacity:1;color:rgb(191 219 254/var(--tw-text-opacity,1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235/var(--tw-text-opacity,1))}.text-blue-700{--tw-text-opacity:1;color:rgb(29 78 216/var(--tw-text-opacity,1))}.text-blue-800{--tw-text-opacity:1;color:rgb(30 64 175/var(--tw-text-opacity,1))}.text-emerald-600{--tw-text-opacity:1;color:rgb(5 150 105/var(--tw-text-opacity,1))}.text-emerald-700{--tw-text-opacity:1;color:rgb(4 120 87/var(--tw-text-opacity,1))}.text-emerald-900{--tw-text-opacity:1;color:rgb(6 78 59/var(--tw-text-opacity,1))}.text-orange-700{--tw-text-opacity:1;color:rgb(194 65 12/var(--tw-text-opacity,1))}.text-orange-900{--tw-text-opacity:1;color:rgb(124 45 18/var(--tw-text-opacity,1))}.text-rose-100{--tw-text-opacity:1;color:rgb(255 228 230/var(--tw-text-opacity,1))}.text-rose-500{--tw-text-opacity:1;color:rgb(244 63 94/var(--tw-text-opacity,1))}.text-rose-600{--tw-text-opacity:1;color:rgb(225 29 72/var(--tw-text-opacity,1))}.text-rose-700{--tw-text-opacity:1;color:rgb(190 18 60/var(--tw-text-opacity,1))}.text-rose-900{--tw-text-opacity:1;color:rgb(136 19 55/var(--tw-text-opacity,1))}.text-slate-100{--tw-text-opacity:1;color:rgb(241 245 249/var(--tw-text-opacity,1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240/var(--tw-text-opacity,1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225/var(--tw-text-opacity,1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184/var(--tw-text-opacity,1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139/var(--tw-text-opacity,1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105/var(--tw-text-opacity,1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85/var(--tw-text-opacity,1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59/var(--tw-text-opacity,1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42/var(--tw-text-opacity,1))}.text-slate-950{--tw-text-opacity:1;color:rgb(2 6 23/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.underline{text-decoration-line:underline}.line-through{text-decoration-line:line-through}.underline-offset-4{text-underline-offset:4px}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-0{opacity:0}.opacity-100{opacity:1}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color)}.shadow-2xl,.shadow-lg{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.shadow-md{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color)}.shadow-md,.shadow-sm{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-blue-600\/20{--tw-shadow-color:rgba(37,99,235,.2);--tw-shadow:var(--tw-shadow-colored)}.shadow-blue-700\/20{--tw-shadow-color:rgba(29,78,216,.2);--tw-shadow:var(--tw-shadow-colored)}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-\[2px\]{--tw-backdrop-blur:blur(2px)}.backdrop-blur-\[2px\],.backdrop-blur-md{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-300{transition-duration:.3s}.duration-500{transition-duration:.5s}.selection\:bg-blue-100 ::-moz-selection{--tw-bg-opacity:1;background-color:rgb(219 234 254/var(--tw-bg-opacity,1))}.selection\:bg-blue-100 ::selection{--tw-bg-opacity:1;background-color:rgb(219 234 254/var(--tw-bg-opacity,1))}.selection\:text-blue-900 ::-moz-selection{--tw-text-opacity:1;color:rgb(30 58 138/var(--tw-text-opacity,1))}.selection\:text-blue-900 ::selection{--tw-text-opacity:1;color:rgb(30 58 138/var(--tw-text-opacity,1))}.selection\:bg-blue-100::-moz-selection{--tw-bg-opacity:1;background-color:rgb(219 234 254/var(--tw-bg-opacity,1))}.selection\:bg-blue-100::selection{--tw-bg-opacity:1;background-color:rgb(219 234 254/var(--tw-bg-opacity,1))}.selection\:text-blue-900::-moz-selection{--tw-text-opacity:1;color:rgb(30 58 138/var(--tw-text-opacity,1))}.selection\:text-blue-900::selection{--tw-text-opacity:1;color:rgb(30 58 138/var(--tw-text-opacity,1))}.first\:mt-1:first-child{margin-top:.25rem}.first\:border-t-0:first-child{border-top-width:0}.empty\:hidden:empty{display:none}.hover\:border-blue-400:hover{--tw-border-opacity:1;border-color:rgb(96 165 250/var(--tw-border-opacity,1))}.hover\:border-slate-300:hover{--tw-border-opacity:1;border-color:rgb(203 213 225/var(--tw-border-opacity,1))}.hover\:bg-amber-100:hover{--tw-bg-opacity:1;background-color:rgb(254 243 199/var(--tw-bg-opacity,1))}.hover\:bg-amber-300:hover{--tw-bg-opacity:1;background-color:rgb(252 211 77/var(--tw-bg-opacity,1))}.hover\:bg-blue-100:hover{--tw-bg-opacity:1;background-color:rgb(219 234 254/var(--tw-bg-opacity,1))}.hover\:bg-blue-50:hover{--tw-bg-opacity:1;background-color:rgb(239 246 255/var(--tw-bg-opacity,1))}.hover\:bg-blue-50\/40:hover{background-color:rgba(239,246,255,.4)}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216/var(--tw-bg-opacity,1))}.hover\:bg-blue-800:hover{--tw-bg-opacity:1;background-color:rgb(30 64 175/var(--tw-bg-opacity,1))}.hover\:bg-orange-100:hover{--tw-bg-opacity:1;background-color:rgb(255 237 213/var(--tw-bg-opacity,1))}.hover\:bg-rose-100:hover{--tw-bg-opacity:1;background-color:rgb(255 228 230/var(--tw-bg-opacity,1))}.hover\:bg-rose-50:hover{--tw-bg-opacity:1;background-color:rgb(255 241 242/var(--tw-bg-opacity,1))}.hover\:bg-slate-100:hover{--tw-bg-opacity:1;background-color:rgb(241 245 249/var(--tw-bg-opacity,1))}.hover\:bg-slate-200:hover{--tw-bg-opacity:1;background-color:rgb(226 232 240/var(--tw-bg-opacity,1))}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252/var(--tw-bg-opacity,1))}.hover\:bg-slate-50\/70:hover{background-color:rgba(248,250,252,.7)}.hover\:bg-slate-50\/80:hover{background-color:rgba(248,250,252,.8)}.hover\:bg-slate-800:hover{--tw-bg-opacity:1;background-color:rgb(30 41 59/var(--tw-bg-opacity,1))}.hover\:bg-white\/10:hover{background-color:hsla(0,0%,100%,.1)}.hover\:bg-white\/20:hover{background-color:hsla(0,0%,100%,.2)}.hover\:text-slate-700:hover{--tw-text-opacity:1;color:rgb(51 65 85/var(--tw-text-opacity,1))}.hover\:text-slate-800:hover{--tw-text-opacity:1;color:rgb(30 41 59/var(--tw-text-opacity,1))}.focus\:border-blue-600:focus{--tw-border-opacity:1;border-color:rgb(37 99 235/var(--tw-border-opacity,1))}.focus\:bg-white:focus{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.focus\:ring-blue-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(59 130 246/var(--tw-ring-opacity,1))}.focus\:ring-blue-500\/30:focus{--tw-ring-color:rgba(59,130,246,.3)}.active\:scale-\[0\.98\]:active{--tw-scale-x:0.98;--tw-scale-y:0.98}.active\:scale-\[0\.98\]:active,.active\:scale-\[0\.99\]:active{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.active\:scale-\[0\.99\]:active{--tw-scale-x:0.99;--tw-scale-y:0.99}.disabled\:cursor-not-allowed:disabled{cursor:not-allowed}.disabled\:opacity-40:disabled{opacity:.4}.disabled\:opacity-50:disabled{opacity:.5}.group[open] .group-open\:rotate-90{--tw-rotate:90deg;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width:640px){.sm\:col-span-1{grid-column:span 1/span 1}.sm\:-mx-6{margin-left:-1.5rem;margin-right:-1.5rem}.sm\:-mb-6{margin-bottom:-1.5rem}.sm\:block{display:block}.sm\:inline{display:inline}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.sm\:flex-row{flex-direction:row}.sm\:items-start{align-items:flex-start}.sm\:items-center{align-items:center}.sm\:justify-between{justify-content:space-between}.sm\:gap-4{gap:1rem}.sm\:rounded-3xl{border-radius:1.5rem}.sm\:p-4{padding:1rem}.sm\:p-5{padding:1.25rem}.sm\:p-6{padding:1.5rem}.sm\:p-7{padding:1.75rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:py-5{padding-top:1.25rem;padding-bottom:1.25rem}.sm\:pt-8{padding-top:2rem}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-\[13px\]{font-size:13px}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}.sm\:text-sm{font-size:.875rem;line-height:1.25rem}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width:768px){.md\:block{display:block}.md\:hidden{display:none}}@media (min-width:1024px){.lg\:col-span-5{grid-column:span 5/span 5}.lg\:col-span-6{grid-column:span 6/span 6}.lg\:col-span-7{grid-column:span 7/span 7}.lg\:block{display:block}.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.lg\:grid-cols-7{grid-template-columns:repeat(7,minmax(0,1fr))}.lg\:pb-12{padding-bottom:3rem}}.\[\&\>svg\]\:h-\[18px\]>svg{height:18px}.\[\&\>svg\]\:w-\[18px\]>svg{width:18px}</style>
+  <style>*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:Pretendard Variable,Pretendard,-apple-system,BlinkMacSystemFont,sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0}.inset-x-0{left:0;right:0}.bottom-0{bottom:0}.bottom-\[-10px\]{bottom:-10px}.left-1\/2{left:50%}.left-\[9px\]{left:9px}.top-0{top:0}.top-5{top:1.25rem}.top-7{top:1.75rem}.z-10{z-index:10}.z-30{z-index:30}.z-50{z-index:50}.z-\[70\]{z-index:70}.col-span-2{grid-column:span 2/span 2}.-mx-5{margin-left:-1.25rem;margin-right:-1.25rem}.mx-auto{margin-left:auto;margin-right:auto}.-mb-5{margin-bottom:-1.25rem}.-ml-2{margin-left:-.5rem}.-mt-2{margin-top:-.5rem}.mb-1{margin-bottom:.25rem}.mb-1\.5{margin-bottom:.375rem}.mb-2{margin-bottom:.5rem}.mb-2\.5{margin-bottom:.625rem}.mb-3{margin-bottom:.75rem}.mb-3\.5{margin-bottom:.875rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.ml-1{margin-left:.25rem}.ml-1\.5{margin-left:.375rem}.ml-2{margin-left:.5rem}.mr-1{margin-right:.25rem}.mr-1\.5{margin-right:.375rem}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-1\.5{margin-top:.375rem}.mt-2{margin-top:.5rem}.mt-2\.5{margin-top:.625rem}.mt-3{margin-top:.75rem}.mt-3\.5{margin-top:.875rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-6{margin-top:1.5rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.table{display:table}.grid{display:grid}.hidden{display:none}.h-1\.5{height:.375rem}.h-14{height:3.5rem}.h-16{height:4rem}.h-2{height:.5rem}.h-2\.5{height:.625rem}.h-3{height:.75rem}.h-3\.5{height:.875rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-8{height:2rem}.h-9{height:2.25rem}.h-full{height:100%}.max-h-\[65vh\]{max-height:65vh}.max-h-\[75vh\]{max-height:75vh}.min-h-screen{min-height:100vh}.w-1\.5{width:.375rem}.w-10{width:2.5rem}.w-14{width:3.5rem}.w-16{width:4rem}.w-20{width:5rem}.w-3{width:.75rem}.w-3\.5{width:.875rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-8{width:2rem}.w-9{width:2.25rem}.w-\[2px\]{width:2px}.w-full{width:100%}.min-w-0{min-width:0}.min-w-\[26px\]{min-width:26px}.max-w-6xl{max-width:72rem}.max-w-\[260px\]{max-width:260px}.max-w-\[92vw\]{max-width:92vw}.max-w-full{max-width:100%}.max-w-lg{max-width:32rem}.max-w-md{max-width:28rem}.max-w-sm{max-width:24rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.border-collapse{border-collapse:collapse}.-translate-x-1\/2{--tw-translate-x:-50%}.-translate-x-1\/2,.-translate-y-2{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-2{--tw-translate-y:-0.5rem}.translate-y-0{--tw-translate-y:0px}.transform,.translate-y-0{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes spin{to{transform:rotate(1turn)}}.animate-spin{animation:spin 1s linear infinite}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;-moz-user-select:none;user-select:none}.resize-y{resize:vertical}.resize{resize:both}.list-inside{list-style-position:inside}.list-decimal{list-style-type:decimal}.list-disc{list-style-type:disc}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-\[44px_1fr\]{grid-template-columns:44px 1fr}.grid-cols-\[minmax\(120px\2c auto\)_1fr\]{grid-template-columns:minmax(120px,auto) 1fr}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-1\.5{gap:.375rem}.gap-2{gap:.5rem}.gap-2\.5{gap:.625rem}.gap-3{gap:.75rem}.gap-3\.5{gap:.875rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-x-2\.5{-moz-column-gap:.625rem;column-gap:.625rem}.gap-x-3{-moz-column-gap:.75rem;column-gap:.75rem}.gap-x-4{-moz-column-gap:1rem;column-gap:1rem}.gap-y-1{row-gap:.25rem}.gap-y-2{row-gap:.5rem}.space-y-1>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.25rem*var(--tw-space-y-reverse))}.space-y-1\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.375rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.375rem*var(--tw-space-y-reverse))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-2\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.625rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.625rem*var(--tw-space-y-reverse))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.space-y-5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem*var(--tw-space-y-reverse))}.space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem*var(--tw-space-y-reverse))}.divide-x>:not([hidden])~:not([hidden]){--tw-divide-x-reverse:0;border-right-width:calc(1px*var(--tw-divide-x-reverse));border-left-width:calc(1px*(1 - var(--tw-divide-x-reverse)))}.divide-y>:not([hidden])~:not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px*(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px*var(--tw-divide-y-reverse))}.divide-slate-100>:not([hidden])~:not([hidden]){--tw-divide-opacity:1;border-color:rgb(241 245 249/var(--tw-divide-opacity,1))}.divide-slate-200>:not([hidden])~:not([hidden]){--tw-divide-opacity:1;border-color:rgb(226 232 240/var(--tw-divide-opacity,1))}.self-start{align-self:flex-start}.overflow-auto{overflow:auto}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.truncate{overflow:hidden;text-overflow:ellipsis}.truncate,.whitespace-nowrap{white-space:nowrap}.break-all{word-break:break-all}.rounded{border-radius:.25rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.rounded-xl{border-radius:.75rem}.rounded-b-3xl{border-bottom-right-radius:1.5rem;border-bottom-left-radius:1.5rem}.rounded-t-3xl{border-top-left-radius:1.5rem;border-top-right-radius:1.5rem}.border{border-width:1px}.border-2{border-width:2px}.border-4{border-width:4px}.border-y{border-top-width:1px}.border-b,.border-y{border-bottom-width:1px}.border-b-2{border-bottom-width:2px}.border-l-\[3px\]{border-left-width:3px}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.border-\[\#0F172A\]{--tw-border-opacity:1;border-color:rgb(15 23 42/var(--tw-border-opacity,1))}.border-amber-200{--tw-border-opacity:1;border-color:rgb(253 230 138/var(--tw-border-opacity,1))}.border-amber-200\/70{border-color:hsla(48,97%,77%,.7)}.border-amber-200\/80{border-color:hsla(48,97%,77%,.8)}.border-amber-400\/30{border-color:rgba(251,191,36,.3)}.border-amber-500\/40{border-color:rgba(245,158,11,.4)}.border-blue-100{--tw-border-opacity:1;border-color:rgb(219 234 254/var(--tw-border-opacity,1))}.border-blue-200{--tw-border-opacity:1;border-color:rgb(191 219 254/var(--tw-border-opacity,1))}.border-blue-200\/60{border-color:rgba(191,219,254,.6)}.border-blue-200\/70{border-color:rgba(191,219,254,.7)}.border-blue-200\/80{border-color:rgba(191,219,254,.8)}.border-blue-400{--tw-border-opacity:1;border-color:rgb(96 165 250/var(--tw-border-opacity,1))}.border-blue-400\/30{border-color:rgba(96,165,250,.3)}.border-blue-600\/80{border-color:rgba(37,99,235,.8)}.border-blue-700{--tw-border-opacity:1;border-color:rgb(29 78 216/var(--tw-border-opacity,1))}.border-emerald-200{--tw-border-opacity:1;border-color:rgb(167 243 208/var(--tw-border-opacity,1))}.border-emerald-200\/70{border-color:rgba(167,243,208,.7)}.border-orange-200{--tw-border-opacity:1;border-color:rgb(254 215 170/var(--tw-border-opacity,1))}.border-orange-200\/70{border-color:hsla(32,98%,83%,.7)}.border-orange-200\/80{border-color:hsla(32,98%,83%,.8)}.border-rose-100{--tw-border-opacity:1;border-color:rgb(255 228 230/var(--tw-border-opacity,1))}.border-rose-200{--tw-border-opacity:1;border-color:rgb(254 205 211/var(--tw-border-opacity,1))}.border-rose-200\/70{border-color:rgba(254,205,211,.7)}.border-rose-200\/80{border-color:rgba(254,205,211,.8)}.border-rose-300{--tw-border-opacity:1;border-color:rgb(253 164 175/var(--tw-border-opacity,1))}.border-rose-400{--tw-border-opacity:1;border-color:rgb(251 113 133/var(--tw-border-opacity,1))}.border-rose-400\/40{border-color:rgba(251,113,133,.4)}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249/var(--tw-border-opacity,1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240/var(--tw-border-opacity,1))}.border-slate-200\/70{border-color:rgba(226,232,240,.7)}.border-slate-200\/80{border-color:rgba(226,232,240,.8)}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225/var(--tw-border-opacity,1))}.border-slate-400\/30{border-color:rgba(148,163,184,.3)}.border-slate-800\/80{border-color:rgba(30,41,59,.8)}.border-transparent{border-color:transparent}.border-white\/15{border-color:hsla(0,0%,100%,.15)}.border-l-slate-200{--tw-border-opacity:1;border-left-color:rgb(226 232 240/var(--tw-border-opacity,1))}.bg-\[\#0F172A\]{--tw-bg-opacity:1;background-color:rgb(15 23 42/var(--tw-bg-opacity,1))}.bg-amber-400{--tw-bg-opacity:1;background-color:rgb(251 191 36/var(--tw-bg-opacity,1))}.bg-amber-50{--tw-bg-opacity:1;background-color:rgb(255 251 235/var(--tw-bg-opacity,1))}.bg-amber-50\/70{background-color:rgba(255,251,235,.7)}.bg-amber-500\/25{background-color:rgba(245,158,11,.25)}.bg-amber-600{--tw-bg-opacity:1;background-color:rgb(217 119 6/var(--tw-bg-opacity,1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255/var(--tw-bg-opacity,1))}.bg-blue-50\/40{background-color:rgba(239,246,255,.4)}.bg-blue-50\/60{background-color:rgba(239,246,255,.6)}.bg-blue-50\/70{background-color:rgba(239,246,255,.7)}.bg-blue-50\/80{background-color:rgba(239,246,255,.8)}.bg-blue-500\/20{background-color:rgba(59,130,246,.2)}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235/var(--tw-bg-opacity,1))}.bg-blue-700{--tw-bg-opacity:1;background-color:rgb(29 78 216/var(--tw-bg-opacity,1))}.bg-emerald-100{--tw-bg-opacity:1;background-color:rgb(209 250 229/var(--tw-bg-opacity,1))}.bg-emerald-400{--tw-bg-opacity:1;background-color:rgb(52 211 153/var(--tw-bg-opacity,1))}.bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245/var(--tw-bg-opacity,1))}.bg-emerald-50\/40{background-color:rgba(236,253,245,.4)}.bg-emerald-50\/50{background-color:rgba(236,253,245,.5)}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129/var(--tw-bg-opacity,1))}.bg-orange-50{--tw-bg-opacity:1;background-color:rgb(255 247 237/var(--tw-bg-opacity,1))}.bg-orange-50\/40{background-color:rgba(255,247,237,.4)}.bg-orange-50\/90{background-color:rgba(255,247,237,.9)}.bg-rose-100{--tw-bg-opacity:1;background-color:rgb(255 228 230/var(--tw-bg-opacity,1))}.bg-rose-50{--tw-bg-opacity:1;background-color:rgb(255 241 242/var(--tw-bg-opacity,1))}.bg-rose-50\/40{background-color:rgba(255,241,242,.4)}.bg-rose-50\/50{background-color:rgba(255,241,242,.5)}.bg-rose-50\/60{background-color:rgba(255,241,242,.6)}.bg-rose-50\/70{background-color:rgba(255,241,242,.7)}.bg-rose-500{--tw-bg-opacity:1;background-color:rgb(244 63 94/var(--tw-bg-opacity,1))}.bg-rose-500\/30{background-color:rgba(244,63,94,.3)}.bg-rose-600{--tw-bg-opacity:1;background-color:rgb(225 29 72/var(--tw-bg-opacity,1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249/var(--tw-bg-opacity,1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240/var(--tw-bg-opacity,1))}.bg-slate-200\/70{background-color:rgba(226,232,240,.7)}.bg-slate-200\/80{background-color:rgba(226,232,240,.8)}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252/var(--tw-bg-opacity,1))}.bg-slate-50\/50{background-color:rgba(248,250,252,.5)}.bg-slate-50\/60{background-color:rgba(248,250,252,.6)}.bg-slate-50\/70{background-color:rgba(248,250,252,.7)}.bg-slate-50\/90{background-color:rgba(248,250,252,.9)}.bg-slate-500\/30{background-color:rgba(100,116,139,.3)}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42/var(--tw-bg-opacity,1))}.bg-slate-900\/50{background-color:rgba(15,23,42,.5)}.bg-slate-900\/95{background-color:rgba(15,23,42,.95)}.bg-slate-950\/80{background-color:rgba(2,6,23,.8)}.bg-transparent{background-color:transparent}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.bg-white\/10{background-color:hsla(0,0%,100%,.1)}.bg-white\/95{background-color:hsla(0,0%,100%,.95)}.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}.from-blue-600{--tw-gradient-from:#2563eb var(--tw-gradient-from-position);--tw-gradient-to:rgba(37,99,235,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.via-rose-500{--tw-gradient-to:rgba(244,63,94,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#f43f5e var(--tw-gradient-via-position),var(--tw-gradient-to)}.to-indigo-600{--tw-gradient-to:#4f46e5 var(--tw-gradient-to-position)}.to-rose-600{--tw-gradient-to:#e11d48 var(--tw-gradient-to-position)}.object-contain{-o-object-fit:contain;object-fit:contain}.p-0{padding:0}.p-1{padding:.25rem}.p-1\.5{padding:.375rem}.p-2{padding:.5rem}.p-3\.5{padding:.875rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-1{padding-left:.25rem;padding-right:.25rem}.px-1\.5{padding-left:.375rem;padding-right:.375rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-2\.5{padding-left:.625rem;padding-right:.625rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-3\.5{padding-left:.875rem;padding-right:.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-3\.5{padding-top:.875rem;padding-bottom:.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.py-7{padding-top:1.75rem;padding-bottom:1.75rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-0\.5{padding-bottom:.125rem}.pb-12{padding-bottom:3rem}.pb-14{padding-bottom:3.5rem}.pb-2{padding-bottom:.5rem}.pb-24{padding-bottom:6rem}.pb-5{padding-bottom:1.25rem}.pl-2{padding-left:.5rem}.pl-3{padding-left:.75rem}.pl-4{padding-left:1rem}.pr-2{padding-right:.5rem}.pr-4{padding-right:1rem}.pt-1{padding-top:.25rem}.pt-10{padding-top:2.5rem}.pt-2{padding-top:.5rem}.pt-2\.5{padding-top:.625rem}.pt-3{padding-top:.75rem}.pt-4{padding-top:1rem}.pt-6{padding-top:1.5rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.align-middle{vertical-align:middle}.font-mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-\[11\.5px\]{font-size:11.5px}.text-\[11px\]{font-size:11px}.text-\[13px\]{font-size:13px}.text-\[15px\]{font-size:15px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.tracking-tight{letter-spacing:-.025em}.text-amber-200{--tw-text-opacity:1;color:rgb(253 230 138/var(--tw-text-opacity,1))}.text-amber-600{--tw-text-opacity:1;color:rgb(217 119 6/var(--tw-text-opacity,1))}.text-amber-700{--tw-text-opacity:1;color:rgb(180 83 9/var(--tw-text-opacity,1))}.text-amber-800{--tw-text-opacity:1;color:rgb(146 64 14/var(--tw-text-opacity,1))}.text-amber-900{--tw-text-opacity:1;color:rgb(120 53 15/var(--tw-text-opacity,1))}.text-blue-200{--tw-text-opacity:1;color:rgb(191 219 254/var(--tw-text-opacity,1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235/var(--tw-text-opacity,1))}.text-blue-700{--tw-text-opacity:1;color:rgb(29 78 216/var(--tw-text-opacity,1))}.text-blue-800{--tw-text-opacity:1;color:rgb(30 64 175/var(--tw-text-opacity,1))}.text-emerald-600{--tw-text-opacity:1;color:rgb(5 150 105/var(--tw-text-opacity,1))}.text-emerald-700{--tw-text-opacity:1;color:rgb(4 120 87/var(--tw-text-opacity,1))}.text-emerald-900{--tw-text-opacity:1;color:rgb(6 78 59/var(--tw-text-opacity,1))}.text-orange-700{--tw-text-opacity:1;color:rgb(194 65 12/var(--tw-text-opacity,1))}.text-orange-900{--tw-text-opacity:1;color:rgb(124 45 18/var(--tw-text-opacity,1))}.text-rose-100{--tw-text-opacity:1;color:rgb(255 228 230/var(--tw-text-opacity,1))}.text-rose-500{--tw-text-opacity:1;color:rgb(244 63 94/var(--tw-text-opacity,1))}.text-rose-600{--tw-text-opacity:1;color:rgb(225 29 72/var(--tw-text-opacity,1))}.text-rose-700{--tw-text-opacity:1;color:rgb(190 18 60/var(--tw-text-opacity,1))}.text-rose-800{--tw-text-opacity:1;color:rgb(159 18 57/var(--tw-text-opacity,1))}.text-rose-900{--tw-text-opacity:1;color:rgb(136 19 55/var(--tw-text-opacity,1))}.text-slate-100{--tw-text-opacity:1;color:rgb(241 245 249/var(--tw-text-opacity,1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240/var(--tw-text-opacity,1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225/var(--tw-text-opacity,1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184/var(--tw-text-opacity,1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139/var(--tw-text-opacity,1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105/var(--tw-text-opacity,1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85/var(--tw-text-opacity,1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59/var(--tw-text-opacity,1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42/var(--tw-text-opacity,1))}.text-slate-950{--tw-text-opacity:1;color:rgb(2 6 23/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.underline{text-decoration-line:underline}.line-through{text-decoration-line:line-through}.underline-offset-4{text-underline-offset:4px}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-0{opacity:0}.opacity-100{opacity:1}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color)}.shadow-2xl,.shadow-lg{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.shadow-md{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color)}.shadow-md,.shadow-sm{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-blue-600\/20{--tw-shadow-color:rgba(37,99,235,.2);--tw-shadow:var(--tw-shadow-colored)}.shadow-blue-700\/20{--tw-shadow-color:rgba(29,78,216,.2);--tw-shadow:var(--tw-shadow-colored)}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-\[2px\]{--tw-backdrop-blur:blur(2px)}.backdrop-blur-\[2px\],.backdrop-blur-md{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-300{transition-duration:.3s}.duration-500{transition-duration:.5s}.selection\:bg-blue-100 ::-moz-selection{--tw-bg-opacity:1;background-color:rgb(219 234 254/var(--tw-bg-opacity,1))}.selection\:bg-blue-100 ::selection{--tw-bg-opacity:1;background-color:rgb(219 234 254/var(--tw-bg-opacity,1))}.selection\:text-blue-900 ::-moz-selection{--tw-text-opacity:1;color:rgb(30 58 138/var(--tw-text-opacity,1))}.selection\:text-blue-900 ::selection{--tw-text-opacity:1;color:rgb(30 58 138/var(--tw-text-opacity,1))}.selection\:bg-blue-100::-moz-selection{--tw-bg-opacity:1;background-color:rgb(219 234 254/var(--tw-bg-opacity,1))}.selection\:bg-blue-100::selection{--tw-bg-opacity:1;background-color:rgb(219 234 254/var(--tw-bg-opacity,1))}.selection\:text-blue-900::-moz-selection{--tw-text-opacity:1;color:rgb(30 58 138/var(--tw-text-opacity,1))}.selection\:text-blue-900::selection{--tw-text-opacity:1;color:rgb(30 58 138/var(--tw-text-opacity,1))}.first\:mt-1:first-child{margin-top:.25rem}.first\:border-t-0:first-child{border-top-width:0}.empty\:hidden:empty{display:none}.hover\:border-blue-400:hover{--tw-border-opacity:1;border-color:rgb(96 165 250/var(--tw-border-opacity,1))}.hover\:border-slate-300:hover{--tw-border-opacity:1;border-color:rgb(203 213 225/var(--tw-border-opacity,1))}.hover\:bg-amber-100:hover{--tw-bg-opacity:1;background-color:rgb(254 243 199/var(--tw-bg-opacity,1))}.hover\:bg-amber-300:hover{--tw-bg-opacity:1;background-color:rgb(252 211 77/var(--tw-bg-opacity,1))}.hover\:bg-blue-100:hover{--tw-bg-opacity:1;background-color:rgb(219 234 254/var(--tw-bg-opacity,1))}.hover\:bg-blue-50:hover{--tw-bg-opacity:1;background-color:rgb(239 246 255/var(--tw-bg-opacity,1))}.hover\:bg-blue-50\/40:hover{background-color:rgba(239,246,255,.4)}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216/var(--tw-bg-opacity,1))}.hover\:bg-blue-800:hover{--tw-bg-opacity:1;background-color:rgb(30 64 175/var(--tw-bg-opacity,1))}.hover\:bg-orange-100:hover{--tw-bg-opacity:1;background-color:rgb(255 237 213/var(--tw-bg-opacity,1))}.hover\:bg-rose-100:hover{--tw-bg-opacity:1;background-color:rgb(255 228 230/var(--tw-bg-opacity,1))}.hover\:bg-rose-50:hover{--tw-bg-opacity:1;background-color:rgb(255 241 242/var(--tw-bg-opacity,1))}.hover\:bg-rose-700:hover{--tw-bg-opacity:1;background-color:rgb(190 18 60/var(--tw-bg-opacity,1))}.hover\:bg-slate-100:hover{--tw-bg-opacity:1;background-color:rgb(241 245 249/var(--tw-bg-opacity,1))}.hover\:bg-slate-200:hover{--tw-bg-opacity:1;background-color:rgb(226 232 240/var(--tw-bg-opacity,1))}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252/var(--tw-bg-opacity,1))}.hover\:bg-slate-50\/70:hover{background-color:rgba(248,250,252,.7)}.hover\:bg-slate-50\/80:hover{background-color:rgba(248,250,252,.8)}.hover\:bg-slate-800:hover{--tw-bg-opacity:1;background-color:rgb(30 41 59/var(--tw-bg-opacity,1))}.hover\:bg-white\/10:hover{background-color:hsla(0,0%,100%,.1)}.hover\:bg-white\/20:hover{background-color:hsla(0,0%,100%,.2)}.hover\:text-slate-700:hover{--tw-text-opacity:1;color:rgb(51 65 85/var(--tw-text-opacity,1))}.hover\:text-slate-800:hover{--tw-text-opacity:1;color:rgb(30 41 59/var(--tw-text-opacity,1))}.hover\:underline:hover{text-decoration-line:underline}.focus\:border-blue-600:focus{--tw-border-opacity:1;border-color:rgb(37 99 235/var(--tw-border-opacity,1))}.focus\:bg-white:focus{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.focus\:ring-blue-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(59 130 246/var(--tw-ring-opacity,1))}.focus\:ring-blue-500\/30:focus{--tw-ring-color:rgba(59,130,246,.3)}.active\:scale-\[0\.98\]:active{--tw-scale-x:0.98;--tw-scale-y:0.98}.active\:scale-\[0\.98\]:active,.active\:scale-\[0\.99\]:active{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.active\:scale-\[0\.99\]:active{--tw-scale-x:0.99;--tw-scale-y:0.99}.disabled\:cursor-not-allowed:disabled{cursor:not-allowed}.disabled\:opacity-40:disabled{opacity:.4}.disabled\:opacity-50:disabled{opacity:.5}.group[open] .group-open\:rotate-90{--tw-rotate:90deg;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width:640px){.sm\:col-span-1{grid-column:span 1/span 1}.sm\:-mx-6{margin-left:-1.5rem;margin-right:-1.5rem}.sm\:-mb-6{margin-bottom:-1.5rem}.sm\:block{display:block}.sm\:inline{display:inline}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.sm\:flex-row{flex-direction:row}.sm\:items-start{align-items:flex-start}.sm\:items-center{align-items:center}.sm\:justify-between{justify-content:space-between}.sm\:gap-4{gap:1rem}.sm\:rounded-3xl{border-radius:1.5rem}.sm\:p-4{padding:1rem}.sm\:p-5{padding:1.25rem}.sm\:p-6{padding:1.5rem}.sm\:p-7{padding:1.75rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:py-5{padding-top:1.25rem;padding-bottom:1.25rem}.sm\:pt-8{padding-top:2rem}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-\[13px\]{font-size:13px}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}.sm\:text-sm{font-size:.875rem;line-height:1.25rem}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width:768px){.md\:block{display:block}.md\:inline-flex{display:inline-flex}.md\:hidden{display:none}.md\:w-36{width:9rem}.md\:w-52{width:13rem}.md\:w-72{width:18rem}.md\:w-\[34\%\]{width:34%}.md\:flex-1{flex:1 1 0%}.md\:flex-row{flex-direction:row}.md\:items-start{align-items:flex-start}.md\:items-center{align-items:center}.md\:justify-between{justify-content:space-between}.md\:gap-3{gap:.75rem}.md\:pl-6{padding-left:1.5rem}}@media (min-width:1024px){.lg\:col-span-5{grid-column:span 5/span 5}.lg\:col-span-6{grid-column:span 6/span 6}.lg\:col-span-7{grid-column:span 7/span 7}.lg\:block{display:block}.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.lg\:grid-cols-7{grid-template-columns:repeat(7,minmax(0,1fr))}.lg\:pb-12{padding-bottom:3rem}}.\[\&\>svg\]\:h-\[18px\]>svg{height:18px}.\[\&\>svg\]\:w-\[18px\]>svg{width:18px}</style>
 
   <style>
     html, body {
@@ -182,7 +182,7 @@
   </div>
 
 <script type="module">
-const APP_BUILD = '26_11_20_15';
+const APP_BUILD = '26_11_23_01';
 
 /* =====================================================================
    설정 — 여기만 고치면 됩니다
@@ -727,6 +727,8 @@ async function makeFirebase(cfg){
         });
       });
     },
+    // 관리자가 근로자 대신 올리기 (받은 자료 올리기). 경로·기록 형식은 직원 업로드와 같음
+    adminUpload(meta, blob, onProg){ return this.upload(meta, blob, onProg); },
     async myUploads(key, year){
       return snapList(await F.getDocs(F.query(F.collection(db,COL.uploads), F.where('empKey','==',key), F.where('year','==',year))));
     },
@@ -771,6 +773,20 @@ async function makeFirebase(cfg){
     async resetPassword(id, initialPw){
       await F.updateDoc(F.doc(db, COL.accounts, id), {pwHash: await pwHash(id, initialPw), mustChange: true, resetAt: Date.now()});
     },
+    // [26_11_23_01] 근로자 초기화: 올린 서류(파일+기록) → 제출 기록(문답표·메모·동의·제출완료) 삭제
+    //   → 계정에 dataResetAt 표시(직원 기기에 남은 문답표 사본도 다음 로그인 때 지움) → 그 근로자 로그인 끊기
+    async resetEmployee({files, subs, keys}, onProg){
+      let n = 0; const total = files.length + subs.length;
+      for (const f of files) { await this.remove(f); onProg && onProg(++n, total); }
+      for (const s of subs) { await F.deleteDoc(F.doc(db, COL.subs, s.id || `${s.year}_${s.empKey}`)); onProg && onProg(++n, total); }
+      const at = Date.now();
+      for (const k of keys) {
+        await F.updateDoc(F.doc(db, COL.accounts, k), {dataResetAt: at});
+        try { const ss = await F.getDocs(F.query(F.collection(db, COL.sessions), F.where('account', '==', k))); await Promise.all(ss.docs.map(d => F.deleteDoc(d.ref))); }
+        catch (e) { console.warn('로그인 끊기 실패(무시)', e); }
+      }
+      return at;
+    },
     async fileBlob(rec){ return S.getBlob(S.ref(st, rec.path)); },
   };
 }
@@ -779,6 +795,7 @@ async function makeDemo(){
   const uploads = [], subs = {}, blobs = {}; let accounts = {}, admin = null, session = null, admins = [], settings = {initialPw: '0000'};
   const sample = [['씨앤에이','1001','본사','홍길동','900101','01012345678'],['씨앤에이','1002','강남지점','김영희','850315','01098765432'],['씨앤에이비즈','1001','본사','이철수','780720','01055556666']];
   for (const [corp,empNo,dept,name,birth,phone] of sample) { const id = acctId(corp, empNo); accounts[id] = {id, corp, empNo, dept, name, birth, phone, year: CONFIG.year, pwHash: await pwHash(id, settings.initialPw), mustChange: true}; }
+  const subsAll = subs;
   return {
     mode:'demo', sample,
     async employeeLogin(id, hash){ const a = accounts[id]; if (!a || a.pwHash !== hash) return null; session = {account:id, pwHash:hash}; return {...a}; },
@@ -788,6 +805,13 @@ async function makeDemo(){
     upload(meta, blob, onProg){
       const a = session && accounts[session.account];
       if (!a || a.id !== meta.empKey || a.pwHash !== session.pwHash) return Promise.reject(new Error('로그인이 필요해요'));
+      return this.put(meta, blob, onProg);
+    },
+    adminUpload(meta, blob, onProg){
+      if (!admin) return Promise.reject(new Error('관리자 로그인이 필요해요'));
+      return this.put(meta, blob, onProg);
+    },
+    put(meta, blob, onProg){
       return new Promise(res => { let p = 0; const t = setInterval(() => { p += .25; onProg(Math.min(p,1)); if (p >= 1) { clearInterval(t);
         const id = 'd' + Date.now() + Math.random().toString(36).slice(2,6); blobs[id] = blob;
         const rec = {...meta, id, path:'demo/'+id, size: blob.size, createdAt: Date.now()}; uploads.push(rec); res(rec); } }, 100); });
@@ -818,6 +842,14 @@ async function makeDemo(){
       accounts = next;
     },
     async resetPassword(id, initialPw){ Object.assign(accounts[id], {pwHash: await pwHash(id, initialPw), mustChange: true}); },
+    async resetEmployee({files, subs, keys}, onProg){
+      let n = 0; const total = files.length + subs.length;
+      for (const f of files) { await this.remove(f); onProg && onProg(++n, total); }
+      for (const s of subs) { for (const [id, v] of Object.entries(subsAll)) if (v === s || (v.empKey === s.empKey && v.year === s.year)) delete subsAll[id]; onProg && onProg(++n, total); }
+      const at = Date.now();
+      for (const k of keys) { if (accounts[k]) accounts[k].dataResetAt = at; if (session && session.account === k) session = null; }
+      return at;
+    },
     async fileBlob(rec){ return blobs[rec.id]; },
   };
 }
@@ -1209,7 +1241,14 @@ async function enterAs(acct){
   E.acct = acct;
   E.profile = {id: acct.id, key: acct.id, corp: acct.corp, empNo: acct.empNo, dept: acct.dept, name: acct.name, birth: acct.birth, mustChange: !!acct.mustChange};
   E.uploads = await api.myUploads(acct.id, CONFIG.year);
-  const sub = await api.mySubmission(subId());
+  let sub = await api.mySubmission(subId());
+  // [26_11_23_01] 담당자가 초기화했으면 이 기기에 남아 있던 문답표·메모·동의 사본도 지움
+  const rAt = acct.dataResetAt || 0, rKey = `ye_reset_${CONFIG.year}_${acct.id}`;
+  if (rAt && ls.get(rKey) !== rAt) {
+    [svKey(), memoKey(), `ye_sens_${CONFIG.year}_${acct.id}`].forEach(k => { try { localStorage.removeItem(k); } catch {} });
+    ls.set(rKey, rAt);
+  }
+  if (sub && rAt && Math.max(sub.surveyAt || 0, sub.completedAt || 0) < rAt) sub = null;
   E.survey = svClean((sub && sub.survey) || ls.get(svKey()) || {});
   E.memo = (sub && sub.memo) || ls.get(memoKey()) || '';
   E.sensitive = !!((sub && sub.sensitiveConsent) || ls.get(`ye_sens_${CONFIG.year}_${acct.id}`));
@@ -1531,7 +1570,7 @@ function renderCatFiles(cat){
   box.querySelector('.files').innerHTML =
     mine.map(u => `<div class="flex items-center justify-between gap-2.5 bg-slate-50 border border-slate-200/80 rounded-xl px-3.5 py-2.5">
         <div class="flex items-center gap-2.5 min-w-0"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
-          <div class="min-w-0"><p class="text-xs sm:text-sm font-bold text-slate-800 truncate">${esc(u.fileName)}</p><p class="text-[11px] text-slate-400">${fmtSize(u.size)} · ${fmtTime(u.createdAt)}</p></div></div>
+          <div class="min-w-0"><p class="text-xs sm:text-sm font-bold text-slate-800 truncate">${esc(u.fileName)}</p><p class="text-[11px] text-slate-400">${fmtSize(u.size)} · ${fmtTime(u.createdAt)}${u.by === 'admin' ? ' · 담당자가 대신 올림' : ''}</p></div></div>
         <div class="flex items-center gap-1.5 shrink-0">
           ${E.local[u.id] ? `<button type="button" data-see="${esc(u.id)}" class="text-xs font-bold text-blue-700 hover:bg-blue-50 px-2 py-1 rounded-lg transition">보기</button>` : ''}
           <button type="button" data-del="${esc(u.id)}" class="text-xs font-bold text-rose-600 hover:bg-rose-50 px-2 py-1 rounded-lg transition">삭제</button>
@@ -1764,7 +1803,7 @@ function renderAdmin(){
         ${stat(cnt('none'), '미제출', 'text-rose-600')}
       </section>
       <div class="border-b border-slate-200 flex items-center gap-1 overflow-x-auto no-scrollbar">
-        ${tabBtn('status', '제출 현황')}${tabBtn('roster', `근로자 명단 (${AD.roster.length})`)}${tabBtn('admins', '관리자')}
+        ${tabBtn('status', '제출 현황')}${tabBtn('intake', `받은 자료 올리기${IK.rows.length ? ' (' + IK.rows.filter(r => r.st !== 'saved').length + ')' : ''}`)}${tabBtn('roster', `근로자 명단 (${AD.roster.length})`)}${tabBtn('admins', '관리자')}
       </div>
       <div id="tab"></div>
     </main>
@@ -1773,7 +1812,7 @@ function renderAdmin(){
   $('#logout').onclick = async () => { await api.adminSignOut(); toast('관리자 로그아웃되었어요.', '👋'); renderAdminLogin(); };
   $('#preview-emp').onclick = () => { UI.preview = true; UI.sim = 'today'; go(''); };
   app.querySelectorAll('[data-tab]').forEach(b => b.onclick = () => { AD.tab = b.dataset.tab; renderAdmin(); });
-  AD.tab === 'status' ? renderStatusTab(ps) : AD.tab === 'roster' ? renderRosterTab() : renderAdminsTab();
+  AD.tab === 'status' ? renderStatusTab(ps) : AD.tab === 'intake' ? renderIntakeTab() : AD.tab === 'roster' ? renderRosterTab() : renderAdminsTab();
   icons();
 }
 
@@ -1796,11 +1835,15 @@ function adminDetail(p){
       </div>`
     + (p.files.length ? `<div class="space-y-2">${p.files.slice().sort((a,b) => a.category.localeCompare(b.category) || a.createdAt - b.createdAt).map(f => `
         <div class="flex flex-wrap items-center justify-between gap-2 bg-white border border-slate-200/80 rounded-xl px-3.5 py-2.5 text-xs">
-          <div class="flex items-center gap-2 min-w-0"><span class="px-2 py-0.5 rounded-md bg-blue-50 text-blue-700 font-bold shrink-0">${esc(catLabel(f.category))}</span><span class="font-bold text-slate-800 truncate">${esc(f.fileName)}</span></div>
+          <div class="flex items-center gap-2 min-w-0"><span class="px-2 py-0.5 rounded-md bg-blue-50 text-blue-700 font-bold shrink-0">${esc(catLabel(f.category))}</span><span class="font-bold text-slate-800 truncate">${esc(f.fileName)}</span>${f.by === 'admin' ? '<span class="px-1.5 py-0.5 rounded-md bg-amber-50 text-amber-800 font-bold shrink-0">담당자 올림</span>' : ''}</div>
           <div class="flex items-center gap-2 shrink-0"><span class="text-slate-400 hidden sm:inline">${fmtSize(f.size)} · ${fmtTime(f.createdAt)}</span>
             <button type="button" data-view="${esc(f.id)}" class="px-2.5 py-1 rounded-lg border border-slate-200 hover:bg-slate-50 font-bold text-slate-700">열기</button>
             <button type="button" data-adel="${esc(f.id)}" class="px-2.5 py-1 rounded-lg border border-rose-200 bg-rose-50/50 hover:bg-rose-50 font-bold text-rose-600">삭제</button></div>
-        </div>`).join('')}</div>` : '<p class="text-xs text-slate-400">업로드된 서류가 없습니다.</p>');
+        </div>`).join('')}</div>` : '<p class="text-xs text-slate-400">업로드된 서류가 없습니다.</p>')
+    + `<div class="mt-3 flex flex-wrap items-center gap-2">`
+    + (p.inRoster ? `<button type="button" data-ikfor="${esc(p.key)}" class="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg border border-blue-200 bg-blue-50/60 hover:bg-blue-50 text-blue-700 transition"><i data-lucide="folder-down" class="w-3.5 h-3.5"></i><span>이 근로자에게 받은 자료 올리기</span></button>` : '')
+    + `<button type="button" data-wipe="${esc(p.key)}" class="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg border border-rose-200 bg-rose-50/50 hover:bg-rose-50 text-rose-600 transition"><i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i><span>이 근로자 초기화 (문답표·서류)</span></button>`
+    + `</div>`;
 }
 
 function renderStatusTab(ps){
@@ -1937,6 +1980,8 @@ function renderStatusTab(ps){
       setTimeout(() => URL.revokeObjectURL(url), 60000);
     } catch (e) { w && w.close(); console.error(e); toast('열기 실패: ' + (e.code || e.message) + ' (CORS 설정 확인)'); }
   });
+  tab.querySelectorAll('[data-wipe]').forEach(b => b.onclick = () => { const p = ps.find(x => x.key === b.dataset.wipe); if (p) openWipeModal(p); });
+  tab.querySelectorAll('[data-ikfor]').forEach(b => b.onclick = () => { IK.fixed = b.dataset.ikfor; IK.rows.forEach(r => { if (r.st !== 'saved' && !r.err) { r.manual = false; ikRefresh(r); r.sel = !!r.key && !r.dup; } }); AD.tab = 'intake'; renderAdmin(); });
   tab.querySelectorAll('[data-adel]').forEach(b => b.onclick = async () => {
     const f = AD.uploads.find(u => u.id === b.dataset.adel);
     if (!confirm(`${f.name}님의 "${f.fileName}"을 삭제할까요? 되돌릴 수 없어요.`)) return;
@@ -1944,6 +1989,71 @@ function renderStatusTab(ps){
     catch (e) { toast('삭제 실패: ' + (e.code || e.message)); }
   });
   icons();
+}
+
+/* ---------- 근로자 초기화 (26_11_23_01) ----------
+   시험으로 넣은 문답표·서류 등을 한 번에 지우고 처음 상태로 되돌림. 명단 정보와 비밀번호는 그대로 둠 */
+function wipeTargets(p){
+  const inR = k => AD.roster.some(r => r.key === k);
+  const same = s => s.corp === p.corp && s.name === p.name && s.birth === p.birth;
+  const subs = AD.subs.filter(s => s.year === CONFIG.year && (s.empKey === p.key || (!inR(s.empKey) && same(s))));
+  const files = p.files.slice();
+  const keys = [...new Set([p.key, ...files.map(f => f.empKey), ...subs.map(s => s.empKey)])].filter(inR);
+  return {files, subs, keys};
+}
+function openWipeModal(p){
+  const t = wipeTargets(p), sv = p.sub?.survey;
+  const svTxt = !t.subs.length ? '없음' : !sv ? '제출 기록만 있음' : svDone(sv) ? '작성 완료' : '작성 중';
+  const byAdmin = t.files.filter(f => f.by === 'admin').length;
+  const m = document.createElement('div');
+  m.id = 'wipe-modal'; m.className = 'fixed inset-0 z-50 flex items-center justify-center p-4';
+  m.innerHTML = `<div class="absolute inset-0 bg-slate-900/50 backdrop-blur-[2px]" data-wipe-x></div>
+    <div class="relative w-full max-w-md bg-white rounded-3xl p-6 shadow-2xl">
+      <div class="flex items-center gap-2.5 mb-1"><span class="w-9 h-9 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center shrink-0"><i data-lucide="alert-triangle" class="w-5 h-5"></i></span>
+        <h3 class="text-lg font-extrabold text-slate-900">근로자 초기화</h3></div>
+      <p class="text-xs text-slate-500 mb-4">${esc(p.corp)} · 사번 ${esc(p.empNo || '-')} · ${esc(p.name)}${p.dept ? ' (' + esc(p.dept) + ')' : ''}</p>
+      <div class="rounded-2xl border border-rose-200 bg-rose-50/70 px-4 py-3.5 text-xs sm:text-sm text-rose-800 leading-relaxed">
+        <p class="font-extrabold">이 근로자가 작성·제출한 내용이 모두 지워지고 처음 상태로 돌아가요. 되돌릴 수 없어요.</p>
+        <ul class="mt-2 space-y-1 list-disc list-inside font-medium">
+          <li>문답표 답변: <strong>${svTxt}</strong></li>
+          <li>올린 서류: <strong>${t.files.length}개</strong>${byAdmin ? ` (담당자가 올린 ${byAdmin}개 포함)` : ''} — 파일까지 삭제</li>
+          <li>메모, 민감정보(건강정보) 동의, 제출 완료 상태</li>
+          <li>지금 로그인돼 있으면 로그아웃돼요</li>
+        </ul>
+      </div>
+      <p class="text-[11.5px] text-slate-500 mt-3">근로자 명단 정보와 비밀번호는 그대로예요. 필요한 서류는 미리 [열기]로 받아 두세요.</p>
+      <label class="flex items-start gap-2 mt-4 text-xs sm:text-sm font-bold text-slate-700 cursor-pointer">
+        <input id="wipe-ok" type="checkbox" class="w-4 h-4 mt-0.5 rounded border-slate-300 text-rose-600">되돌릴 수 없다는 걸 확인했어요. ${esc(p.name)}님 자료를 초기화할게요.</label>
+      <p id="wipe-st" class="text-xs font-semibold text-slate-500 mt-2 empty:hidden"></p>
+      <div class="flex gap-2 mt-5">
+        <button type="button" data-wipe-x class="flex-1 text-sm font-bold py-3 rounded-xl border border-slate-200 hover:bg-slate-50 text-slate-700">취소</button>
+        <button type="button" id="wipe-go" disabled style="opacity:.5" class="flex-1 text-sm font-bold py-3 rounded-xl bg-rose-600 hover:bg-rose-700 text-white transition">초기화</button>
+      </div>
+    </div>`;
+  document.body.appendChild(m); icons();
+  let busy = false;
+  const close = () => { if (!busy) m.remove(); };
+  m.querySelectorAll('[data-wipe-x]').forEach(x => x.onclick = close);
+  const ok = $('#wipe-ok'), go = $('#wipe-go');
+  ok.onchange = () => { go.disabled = !ok.checked; go.style.opacity = ok.checked ? '' : '.5'; };
+  go.onclick = async () => {
+    if (!ok.checked || busy) return;
+    busy = true; go.disabled = true; ok.disabled = true; go.textContent = '초기화 중…';
+    const st = $('#wipe-st');
+    try {
+      await api.resetEmployee(t, (n, total) => { st.textContent = `지우는 중… ${n}/${total}`; });
+      const fIds = new Set(t.files.map(f => f.id));
+      AD.uploads = AD.uploads.filter(u => !fIds.has(u.id));
+      AD.subs = AD.subs.filter(s => !t.subs.includes(s));
+      busy = false; m.remove(); renderAdmin();
+      toast(`${p.name}님 자료를 초기화했어요 (서류 ${t.files.length}개 삭제)`, '🧹');
+    } catch (e) {
+      console.error(e); busy = false;
+      st.className = 'text-xs font-bold text-rose-600 mt-2'; st.textContent = '초기화 실패: ' + (e.code || e.message) + ' — 새로고침 후 남은 내용을 확인하고 다시 해 주세요.';
+      go.textContent = '다시 시도'; go.disabled = false; ok.disabled = false;
+      try { await loadAdmin(); } catch {}
+    }
+  };
 }
 
 /* ---------- 근로자 명단 탭 ---------- */
@@ -2396,12 +2506,327 @@ const SRI = {
   'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js': 'sha384-ZZ1pncU3bQe8y31yfZdMFdSpttDoPmOZg2wguVK9almUodir1PghgT0eY7Mrty8H',
   'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js': 'sha384-JcnsjUPPylna1s1fvi1u12X5qjY5OL56iySh75FdtrwhO/SWXgMjoVqcKyIIWOLk',
   'https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js': 'sha384-Pqp51FUN2/qzfxZxBCtF0stpc9ONI6MYZpVqmo8m20SoaQCzf+arZvACkLkirlPz',
+  // PDF 내용 읽기 (받은 자료 올리기에서만, 누를 때 불러옴)
+  'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js': 'sha384-/1qUCSGwTur9vjf/z9lmu/eCUYbpOTgSjmpbMQZ1/CtX2v/WcAIKqRv+U1DUCG6e',
+  'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js': 'sha384-SnzOobpRMLXZ52iJvZm/C0fYw0OQemTXzTjIsdsfMcrCtCEe9qgzxTd3RSklO5x2',
 };
 const loadScript = src => new Promise((res, rej) => { const t = document.createElement('script'); t.src = src; if (SRI[src]) { t.integrity = SRI[src]; t.crossOrigin = 'anonymous'; } t.onload = res; t.onerror = () => rej(new Error('라이브러리를 불러오지 못했어요 (인터넷 연결 확인)')); document.head.appendChild(t); });
 async function pdfLibs(){
   if (!window.html2canvas) await loadScript('https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js');
   if (!window.jspdf) await loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js');
   return {h2c: window.html2canvas, jsPDF: window.jspdf.jsPDF};
+}
+
+/* =====================================================================
+   받은 자료 올리기 (26_11_20_16)
+   점·근무자에게 직접 받은 파일을 한꺼번에 넣으면 파일 이름·폴더 이름·PDF 내용을 읽어서
+   어느 근로자의 어떤 서류인지 자동으로 맞춤 → 관리자가 확인하고 [저장]하면 그 근로자 칸에 들어감
+   (파일 내용은 이 브라우저 안에서만 읽고, 다른 곳으로 보내지 않음)
+   ===================================================================== */
+const PDFJS = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/';
+const IK = { rows: [], fixed: '', busy: false, only: false, seq: 0 };
+
+// [서류 id, 파일·폴더 이름 키워드, PDF 첫 부분(서류 제목) 키워드] — 위에서부터 먼저 맞는 것
+const IK_RULES = [
+  ['simple',   /간소화|공제증명|공제자료|연말정산자료/,                 /소득[·ㆍ.]?세액공제증명서류|연말정산간소화/],
+  ['resident', /등본|초본|주민등록표/,                                 /주민등록표\(?(등본|초본)/],
+  ['family',   /가족관계/,                                             /가족관계증명서/],
+  ['temp',     /일시퇴거/,                                             /일시퇴거/],
+  ['special',  /입양|수급자|위탁/,                                     /입양관계증명서|수급자증명서|가정위탁/],
+  ['disabled', /장애|복지카드|상이자|유공자/,                          /장애인증명서|장애정도|국가유공자/],
+  ['prev',     /원천징수|전근무|전직장|종전/,                          /근로소득원천징수영수증/],
+  ['sme',      /중소기업|감면/,                                         /중소기업취업자.{0,20}감면/],
+  ['jeonse_p', /개인간|개인차입|금전소비대차|차용/,                     /금전소비대차|차용증/],
+  ['jeonse',   /전세|임차차입|주택임차/,                               /주택임차차입금|전세자금대출/],
+  ['mortgage', /주택담보|저당|이자상환/,                               /장기주택저당차입금|이자상환증명/],
+  ['rent',     /월세|임대차/,                                           /임대차계약서|월세/],
+  ['medical',  /의료비|진료비|약제비|병원|약국|안경|산후조리|보청기/,   /의료비(납입)?(확인서|영수증)|진료비(계산서|영수증)|약제비/],
+  ['edu',      /교육비|학원|교복|수업료|등록금|체험학습|어린이집|유치원/, /교육비납입증명서|교육비납입|수업료/],
+  ['donation', /기부/,                                                  /기부금영수증|기부금명세서/],
+  ['savings',  /연금저축|퇴직연금|청약|주택마련|보험|납입증명/,          /연금저축|연금계좌|주택청약|주택마련저축|납입증명서/],
+];
+const IK_SKIP = /(^|\/)(__MACOSX|\.DS_Store|Thumbs\.db|desktop\.ini)(\/|$)|(^|\/)\._/i;
+
+async function pdfJsLib(){
+  // 워커 파일도 같은 화면에서 불러와 실행 (외부 워커를 따로 띄우지 않음, 둘 다 SRI 검사)
+  if (!window.pdfjsWorker) await loadScript(PDFJS + 'build/pdf.worker.min.js');
+  if (!window.pdfjsLib) await loadScript(PDFJS + 'build/pdf.min.js');
+  return window.pdfjsLib;
+}
+async function pdfText(file){
+  let lib; try { lib = await pdfJsLib(); } catch { return {err:'lib'}; }
+  try {
+    const doc = await lib.getDocument({data: new Uint8Array(await file.arrayBuffer()), isEvalSupported: false,
+      cMapUrl: PDFJS + 'cmaps/', cMapPacked: true, standardFontDataUrl: PDFJS + 'standard_fonts/', disableFontFace: true}).promise;
+    let text = ''; const n = Math.min(doc.numPages, 3);
+    for (let i = 1; i <= n; i++) { const tc = await (await doc.getPage(i)).getTextContent(); text += tc.items.map(x => x.str).join(' ') + '\n'; }
+    const pages = doc.numPages; doc.destroy();
+    return {text, pages};
+  } catch (e) { return {err: e && e.name === 'PasswordException' ? 'pw' : 'read'}; }
+}
+async function fileHash(file){
+  const b = await crypto.subtle.digest('SHA-256', await file.arrayBuffer());
+  return [...new Uint8Array(b)].map(x => x.toString(16).padStart(2,'0')).join('');
+}
+
+/* 서류 종류: 파일·폴더 이름 → PDF 첫 부분 순서로 찾음 */
+function ikGuessCat(path, text){
+  const p = normName(path).replace(/\.[^.]+$/, '');
+  for (const [id, re] of IK_RULES) if (re.test(p)) return {cat: id, why: '파일 이름', resident2: id === 'resident' && /초본/.test(p)};
+  const head = normName(text || '').slice(0, 600);
+  if (head) for (const [id, , re] of IK_RULES) if (re.test(head)) return {cat: id, why: 'PDF 내용', resident2: id === 'resident' && /초본/.test(head)};
+  return {cat: '', why: ''};
+}
+
+/* 근로자: 파일·폴더 이름의 이름·사번·생년월일·법인·소속 + PDF 안의 이름·주민번호 앞자리로 점수 */
+function ikGuessEmp(path, text){
+  const R = AD.roster; if (!R.length) return {key:'', conf:'none', why:[], cands:[]};
+  const P = normName(path), toks = new Set(path.split(/[^0-9A-Za-z]+/).filter(Boolean));
+  const pBirth = new Set();
+  for (const t of toks) { if (/^\d{6}$/.test(t)) pBirth.add(t); if (/^(19|20)\d{6}$/.test(t)) pBirth.add(t.slice(2)); }
+  for (const m of path.matchAll(/(?:^|\D)(?:19|20)?(\d{2})[.\-_ ](\d{2})[.\-_ ](\d{2})(?!\d)/g)) pBirth.add(m[1] + m[2] + m[3]);
+  const T = normName(text || ''), tBirth = new Set([...T.matchAll(/(\d{6})-[1-8*]/g)].map(m => m[1]));
+  const pBiz = /씨앤에이비즈|비즈|cnabiz/i.test(P), pCna = !pBiz && /씨앤에이|cna/i.test(P);
+  const first = (() => { let best = null, at = Infinity; for (const r of R) { const i = r.name && r.name.length >= 2 ? T.indexOf(r.name) : -1; if (i >= 0 && i < at) { at = i; best = r.name; } } return best; })();
+  const cands = [];
+  for (const r of R) {
+    let s = 0; const why = []; let nameHit = false, empHit = false, birthHit = false, other = false;
+    if (r.name && r.name.length >= 2 && P.includes(r.name)) { s += 3; nameHit = true; why.push('이름'); }
+    else if (r.name && r.name.length >= 2 && T.includes(r.name)) { s += 2 + (first === r.name ? 1 : 0); nameHit = true; why.push('PDF 속 이름'); }
+    if (r.empNo && toks.has(String(r.empNo))) { s += 3; empHit = true; why.push('사번'); }
+    if (r.birth && pBirth.has(r.birth)) { s += 3; birthHit = true; why.push('생년월일'); }
+    else if (r.birth && tBirth.has(r.birth)) { s += 3; birthHit = true; why.push('PDF 속 주민번호 앞자리'); }
+    if (pBiz || pCna) { const ok = (pBiz && r.corp === '씨앤에이비즈') || (pCna && r.corp === '씨앤에이'); s += ok ? 1 : -3; if (ok) { other = true; why.push('법인'); } }
+    if (r.dept && r.dept.length >= 2 && P.includes(normName(r.dept))) { s += 1; other = true; why.push('소속'); }
+    if (nameHit || (empHit && (birthHit || other)) || (birthHit && other)) cands.push({key: r.key, s, why});
+  }
+  cands.sort((a,b) => b.s - a.s);
+  const [a, b] = cands;
+  if (!a) return {key:'', conf:'none', why:[], cands:[]};
+  if (b && b.s === a.s) return {key:'', conf:'tie', why:[], cands: cands.filter(c => c.s === a.s).map(c => c.key)};
+  // 확실: 점수 5 이상이고 2등과 3점 이상 차이, 또는 파일·폴더 이름의 이름과 맞는 사람이 딱 1명
+  const conf = (a.s >= 5 && (!b || b.s <= a.s - 3)) || (!b && a.why.includes('이름')) ? 'high' : 'mid';
+  return {key: a.key, conf, why: a.why, cands: cands.slice(0, 3).map(c => c.key)};
+}
+
+const ikEmp = key => AD.roster.find(r => r.key === key);
+const ikEmpLabel = r => r ? `${r.corp} · ${r.empNo} · ${r.name}${r.dept ? ' (' + r.dept + ')' : ''}` : '';
+function ikDupOf(row){
+  if (!row.key || !row.hash) return null;
+  return AD.uploads.find(u => u.empKey === row.key && (u.sha256 === row.hash || (u.fileName === row.name && u.size === row.size)))
+    || IK.rows.find(o => o !== row && o.key === row.key && o.hash === row.hash && (o.st === 'saved' || IK.rows.indexOf(o) < IK.rows.indexOf(row))) || null;
+}
+function ikState(r){
+  if (r.st === 'saved') return ['saved', '저장됨'];
+  if (r.st === 'saving') return ['saving', '저장 중'];
+  if (r.err) return ['err', r.err];
+  if (r.st === 'read') return ['read', '읽는 중'];
+  if (!r.key) return ['need', r.conf === 'tie' ? '동명이인 — 골라 주세요' : '근로자 지정 필요'];
+  if (!r.cat) return ['need', '서류 종류 지정 필요'];
+  if (r.dup) return ['dup', '이미 올린 파일 같아요'];
+  if (r.manual || IK.fixed) return ['ok', '지정함'];
+  if (r.conf === 'high' && r.catWhy) return ['ok', '자동'];
+  return ['chk', '확인해 주세요'];
+}
+const IK_TONE = {saved:'text-emerald-700 bg-emerald-50', saving:'text-blue-700 bg-blue-50', read:'text-slate-500 bg-slate-100', err:'text-rose-600 bg-rose-50', need:'text-orange-700 bg-orange-50', dup:'text-slate-600 bg-slate-200/70', ok:'text-emerald-700 bg-emerald-50', chk:'text-amber-800 bg-amber-50'};
+
+function ikRefresh(r){
+  if (r.st === 'saved' || r.err) return;
+  if (!r.manual) r.key = IK.fixed || r.autoKey;
+  r.dup = !!ikDupOf(r);
+  if (r.dup && !r.dupSeen) { r.sel = false; r.dupSeen = true; }
+}
+
+/* 파일 모으기: 끌어다 놓은 폴더 안쪽까지 + ZIP 안 파일까지 */
+async function ikCollectDrop(dt){
+  const ents = [...(dt.items || [])].map(i => i.webkitGetAsEntry && i.webkitGetAsEntry()).filter(Boolean);   // await 전에 먼저 꺼내야 함
+  if (!ents.length) return [...dt.files].map(f => ({file: f, path: f.name}));
+  const out = [];
+  const walk = async (e, dir) => {
+    if (e.isFile) { const f = await new Promise((res, rej) => e.file(res, rej)); out.push({file: f, path: dir + f.name}); return; }
+    if (!e.isDirectory) return;
+    const rd = e.createReader(); let batch;
+    do { batch = await new Promise((res, rej) => rd.readEntries(res, rej)); for (const c of batch) await walk(c, dir + e.name + '/'); } while (batch.length);
+  };
+  for (const e of ents) await walk(e, '');
+  return out;
+}
+async function ikExpandZips(items){
+  const out = [];
+  for (const it of items) {
+    if (extOf(it.file.name) !== 'zip') { out.push(it); continue; }
+    if (!window.JSZip) { out.push({...it, bad: 'ZIP을 열 수 없어요'}); continue; }
+    try {
+      const zip = await JSZip.loadAsync(it.file, {decodeFileName: b => { const u = new Uint8Array(b); try { return new TextDecoder('utf-8', {fatal: true}).decode(u); } catch { return new TextDecoder('euc-kr').decode(u); } }});
+      const base = it.path.replace(/\.zip$/i, '') + '/';
+      for (const z of Object.values(zip.files)) {
+        if (z.dir || IK_SKIP.test(z.name)) continue;
+        const nm = z.name.split('/').pop(), ext = extOf(nm);
+        const type = {pdf:'application/pdf', jpg:'image/jpeg', jpeg:'image/jpeg', png:'image/png', heic:'image/heic', heif:'image/heif'}[ext] || '';
+        out.push({file: new File([await z.async('blob')], nm, {type}), path: base + z.name});
+      }
+    } catch (e) { console.error(e); out.push({...it, bad: 'ZIP을 열 수 없어요 (암호가 걸렸거나 손상됨)'}); }
+  }
+  return out;
+}
+
+async function ikAdd(items){
+  if (!AD.roster.length) return toast('근로자 명단을 먼저 등록해 주세요');
+  items = (await ikExpandZips(items.filter(it => !IK_SKIP.test(it.path)))).filter(it => !IK_SKIP.test(it.path));
+  if (!items.length) return toast('올릴 파일이 없어요');
+  const added = items.map(it => ({id: 'k' + (++IK.seq), file: it.file, name: it.file.name, path: it.path || it.file.name, size: it.file.size,
+    st: 'read', sel: false, key: '', autoKey: '', cat: '', why: [], catWhy: '', note: '', err: it.bad || '', p: 0}));
+  IK.rows.push(...added); renderIntakeTab();
+  for (const r of added) {
+    if (r.err) { r.st = ''; continue; }
+    try {
+      if (!isAllowed(r.file)) { r.err = '올릴 수 없는 형식 (PDF·JPG·PNG·HEIC만)'; r.st = ''; continue; }
+      if (r.size > CONFIG.maxFileMB * 1048576 && !mimeOf(r.file).startsWith('image/')) { r.err = `${CONFIG.maxFileMB}MB 초과`; r.st = ''; continue; }
+      r.hash = await fileHash(r.file);
+      let text = '';
+      if (mimeOf(r.file) === 'application/pdf') {
+        const t = await pdfText(r.file);
+        if (t.err === 'pw') r.note = '암호 걸린 PDF — 내용은 못 읽고 파일 이름으로만 판단';
+        else if (t.err === 'lib') r.note = 'PDF 읽기 기능을 못 불러와서 파일 이름으로만 판단';
+        else if (t.err) r.note = 'PDF 내용을 못 읽어서 파일 이름으로만 판단';
+        else { text = t.text; if (normName(text).length < 20) r.note = '글자가 없는 PDF(스캔본) — 파일 이름으로만 판단'; }
+      }
+      const e = ikGuessEmp(r.path, text), c = ikGuessCat(r.path, text);
+      Object.assign(r, {autoKey: e.key, conf: e.conf, why: e.why, cands: e.cands, cat: c.cat || 'etc', catWhy: c.why});
+      if (!c.cat) r.note = (r.note ? r.note + ' · ' : '') + '서류 종류를 못 찾아서 「기타 서류」로 둠';
+      if (c.resident2) r.note = (r.note ? r.note + ' · ' : '') + '초본 같아요 — 등본(세대원 전원)이 필요해요';
+      r.st = ''; ikRefresh(r); r.sel = !!r.key && !r.dup;
+    } catch (err) { console.error(err); r.err = '파일을 읽지 못했어요'; r.st = ''; }
+    finally { renderIntakeTab(); }
+  }
+  renderIntakeTab();
+}
+
+async function ikSave(){
+  const todo = IK.rows.filter(r => r.sel && r.key && r.cat && !r.err && r.st !== 'saved');
+  if (!todo.length) return toast('저장할 파일을 골라 주세요 (근로자·서류 종류가 정해진 줄만)');
+  const who = new Set(todo.map(r => r.key)).size;
+  if (!confirm(`${who}명에게 파일 ${todo.length}개를 저장할까요?\n저장하면 근로자 화면의 해당 서류 칸에도 보여요.`)) return;
+  IK.busy = true; let ok = 0, fail = 0;
+  for (const r of todo) {
+    const p = ikEmp(r.key); if (!p) { r.err = '명단에 없는 근로자'; fail++; continue; }
+    r.st = 'saving'; r.p = 0; renderIntakeTab();
+    try {
+      const blob = mimeOf(r.file).startsWith('image/') ? await prepareImage(r.file) : r.file;
+      if (blob.size > CONFIG.maxFileMB * 1048576) throw new Error(`${CONFIG.maxFileMB}MB 초과`);
+      const fileName = blob.name || r.name, contentType = mimeOf(blob.name ? blob : r.file);
+      const rec = await api.adminUpload({
+        year: CONFIG.year, empKey: p.key, empNo: p.empNo, name: p.name, birth: p.birth, corp: p.corp, dept: p.dept,
+        category: r.cat, fileName, contentType, by: 'admin', byEmail: AD.me, srcPath: r.path.slice(-200), sha256: r.hash || '',
+      }, blob, x => { r.p = x; const bar = $('#ikpg-' + r.id); if (bar) bar.style.width = Math.round(x * 100) + '%'; });
+      AD.uploads.push(rec); r.st = 'saved'; r.sel = false; ok++;
+    } catch (e) {
+      console.error(e); r.st = ''; fail++;
+      r.err = e.code === 'storage/unauthorized' || e.code === 'permission-denied' ? '권한 오류 (보안규칙 16 게시 필요)' : ('저장 실패: ' + (e.message || e.code));
+    }
+    renderIntakeTab();
+  }
+  IK.busy = false; IK.rows.forEach(ikRefresh); renderIntakeTab();
+  toast(fail ? `${ok}개 저장, ${fail}개 실패` : `${who}명에게 ${ok}개 저장했어요`);
+}
+
+function renderIntakeTab(){
+  if (AD.tab !== 'intake' || !$('#tab')) return;
+  const rows = IK.rows, R = AD.roster.slice().sort(empOrder);
+  const cnt = k => rows.filter(r => ikState(r)[0] === k).length;
+  const selN = rows.filter(r => r.sel && r.key && r.cat && !r.err && r.st !== 'saved').length;
+  const view = IK.only ? rows.filter(r => ['need','chk','dup','err'].includes(ikState(r)[0])) : rows;
+  const empOpts = sel => `<option value="">— 근로자 고르기 —</option>` + CONFIG.corps.map(c => {
+      const g = R.filter(r => r.corp === c); return g.length ? `<optgroup label="${esc(c)}">${g.map(r => `<option value="${esc(r.key)}" ${r.key === sel ? 'selected' : ''}>${esc(c)} · ${esc(r.empNo)} · ${esc(r.name)}${r.dept ? ' (' + esc(r.dept) + ')' : ''} · ${esc(fmtBirth(r.birth))}</option>`).join('')}</optgroup>` : ''; }).join('');
+  const catOpts = sel => UPLOAD_CATS().map(c => `<option value="${c.id}" ${c.id === sel ? 'selected' : ''}>${esc(c.label)}</option>`).join('');
+  const busy = IK.busy;
+  $('#tab').innerHTML = `<section class="space-y-4">
+    <div class="${CARD}">
+      <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+        <div class="min-w-0">
+          <h3 class="text-base sm:text-lg font-extrabold text-slate-900">받은 자료 한꺼번에 올리기</h3>
+          <p class="text-xs sm:text-sm text-slate-500 mt-1 leading-relaxed">점·근무자에게 직접 받은 파일을 여기에 넣으면, <strong class="text-slate-700">파일·폴더 이름</strong>과 <strong class="text-slate-700">PDF 안의 이름·주민번호 앞자리</strong>를 읽어서 누구의 어떤 서류인지 자동으로 맞춰요. 확인하고 [저장]을 누르면 그 근로자의 서류 칸에 들어가요.</p>
+          <ul class="text-[11.5px] text-slate-500 mt-2 space-y-1 list-disc list-inside">
+            <li>파일 이름에 <strong>이름·사번</strong>을 넣으면 가장 정확해요 (예: <span class="font-mono">홍길동_1001_등본.pdf</span>). 사람별 폴더나 ZIP도 그대로 넣어도 돼요.</li>
+            <li>간소화 PDF처럼 글자가 들어 있는 PDF는 내용으로도 찾아요. 사진·스캔본은 파일 이름으로만 찾아요.</li>
+            <li>파일은 이 브라우저 안에서만 읽고, 저장할 때만 서버(근로자 폴더)로 올라가요.</li>
+          </ul>
+        </div>
+        <div class="md:w-72 shrink-0 space-y-1.5">
+          <label class="text-xs font-bold text-slate-600">모두 한 사람 서류인가요?</label>
+          <select id="ik-fixed" class="${INPUT_SM} w-full" ${busy ? 'disabled' : ''}>${empOpts(IK.fixed).replace('— 근로자 고르기 —', '아니요, 자동으로 나눠 주세요')}</select>
+          <p class="text-[11px] text-slate-400">고르면 모든 줄이 그 사람으로 바뀌어요.</p>
+        </div>
+      </div>
+      <div id="ik-drop" class="mt-4 border-2 border-dashed border-slate-300 rounded-2xl px-4 py-7 text-center bg-slate-50/70 transition">
+        <i data-lucide="folder-down" class="w-8 h-8 text-blue-600 mx-auto"></i>
+        <p class="text-sm font-bold text-slate-800 mt-2">파일·폴더·ZIP을 여기로 끌어다 놓으세요</p>
+        <p class="text-[11px] text-slate-500 mt-1">PDF · JPG · PNG · HEIC · ZIP / 파일당 ${CONFIG.maxFileMB}MB 이하</p>
+        <div class="flex items-center justify-center gap-2 mt-3 flex-wrap">
+          <button type="button" id="ik-pick" class="${BTN.sm}" ${busy ? 'disabled' : ''}><i data-lucide="file-plus" class="w-3.5 h-3.5"></i><span>파일 고르기</span></button>
+          <button type="button" id="ik-dir" class="${BTN.sm} hidden md:inline-flex" ${busy ? 'disabled' : ''}><i data-lucide="folder-open" class="w-3.5 h-3.5"></i><span>폴더 고르기</span></button>
+        </div>
+      </div>
+    </div>
+    ${rows.length ? `
+    <div class="flex flex-wrap items-center justify-between gap-2.5">
+      <div class="flex items-center gap-1.5 flex-wrap text-xs font-bold">
+        <span class="text-sm text-slate-700 mr-1">${rows.length}개</span>
+        ${[['ok','자동·지정'],['chk','확인 필요'],['need','지정 필요'],['dup','중복 의심'],['err','오류'],['saved','저장됨']].map(([k, t]) => cnt(k) ? `<span class="px-2 py-0.5 rounded-md ${IK_TONE[k]}">${t} ${cnt(k)}</span>` : '').join('')}
+        <label class="inline-flex items-center gap-1.5 ml-1 text-slate-600 cursor-pointer"><input id="ik-only" type="checkbox" ${IK.only ? 'checked' : ''} class="w-4 h-4 rounded border-slate-300 text-blue-600">확인할 것만 보기</label>
+      </div>
+      <div class="flex items-center gap-2 flex-wrap">
+        <button type="button" id="ik-clear" class="${BTN.sm}" ${busy ? 'disabled' : ''}><i data-lucide="eraser" class="w-3.5 h-3.5"></i><span>${cnt('saved') && cnt('saved') < rows.length ? '저장된 줄 지우기' : '목록 비우기'}</span></button>
+        <button type="button" id="ik-save" class="text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl bg-blue-700 hover:bg-blue-800 text-white transition shadow-sm inline-flex items-center gap-1.5" ${busy || !selN ? 'disabled style="opacity:.5"' : ''}>
+          <i data-lucide="cloud-upload" class="w-4 h-4"></i><span>${busy ? '저장 중…' : `선택한 ${selN}개 저장`}</span></button>
+      </div>
+    </div>
+    <div class="space-y-2">${view.map(r => {
+      const [k, label] = ikState(r), locked = busy || r.st === 'saved' || r.st === 'saving' || r.st === 'read' || !!r.err;
+      const tone = k === 'need' ? 'border-orange-200 bg-orange-50/40' : k === 'err' ? 'border-rose-200 bg-rose-50/40' : k === 'saved' ? 'border-emerald-200 bg-emerald-50/40' : 'border-slate-200/80 bg-white';
+      const dir = r.path.includes('/') ? r.path.slice(0, r.path.lastIndexOf('/')) : '';
+      const why = [r.why.length ? '근로자: ' + r.why.join('·') : '', r.catWhy ? '종류: ' + r.catWhy : ''].filter(Boolean).join(' / ');
+      const tie = r.conf === 'tie' && !r.key && r.cands?.length ? '후보: ' + r.cands.map(c => ikEmpLabel(ikEmp(c))).join(', ') : '';
+      return `<div data-ik-row="${r.id}" class="border rounded-2xl p-3.5 ${tone}">
+        <div class="flex flex-col md:flex-row md:items-center gap-2.5 md:gap-3">
+          <label class="flex items-start gap-2.5 md:w-[34%] min-w-0">
+            <input type="checkbox" data-ik-sel="${r.id}" ${r.sel ? 'checked' : ''} ${locked || !r.key ? 'disabled' : ''} class="w-4 h-4 mt-0.5 rounded border-slate-300 text-blue-600 shrink-0">
+            <span class="min-w-0 block">
+              <button type="button" data-ik-see="${r.id}" class="block max-w-full text-left text-xs sm:text-sm font-bold text-slate-800 truncate hover:underline">${esc(r.name)}</button>
+              <span class="block text-[11px] text-slate-400 truncate">${dir ? esc(dir) + ' · ' : ''}${fmtSize(r.size)}</span>
+            </span>
+          </label>
+          <select data-ik-emp="${r.id}" class="${INPUT_SM} w-full md:flex-1 min-w-0" ${locked ? 'disabled' : ''}>${empOpts(r.key)}</select>
+          <select data-ik-cat="${r.id}" class="${INPUT_SM} w-full md:w-52 shrink-0" ${locked ? 'disabled' : ''}>${r.err && !r.hash ? '<option>-</option>' : catOpts(r.cat)}</select>
+          <span class="md:w-36 shrink-0 text-xs font-extrabold px-2.5 py-1 rounded-full text-center ${IK_TONE[k]}">${esc(label)}</span>
+        </div>
+        ${r.st === 'saving' ? `<div class="mt-2 h-1.5 bg-slate-200 rounded-full overflow-hidden"><div id="ikpg-${r.id}" class="h-full bg-blue-600" style="width:${Math.round(r.p * 100)}%"></div></div>` : ''}
+        ${why || r.note || tie ? `<p class="mt-2 text-[11px] text-slate-500 md:pl-6">${esc([why, tie, r.note].filter(Boolean).join(' · '))}</p>` : ''}
+      </div>`; }).join('')}</div>` : ''}
+  </section>`;
+  const drop = $('#ik-drop');
+  const pick = dirMode => { if (busy) return; const el = document.createElement('input'); el.type = 'file'; el.multiple = true;
+    if (dirMode) el.webkitdirectory = true; else el.accept = '.pdf,.jpg,.jpeg,.png,.heic,.heif,.zip,application/pdf,image/*,application/zip';
+    el.onchange = () => ikAdd([...el.files].map(f => ({file: f, path: f.webkitRelativePath || f.name}))); el.click(); };
+  $('#ik-pick').onclick = () => pick(false);
+  $('#ik-dir').onclick = () => pick(true);
+  drop.ondragover = e => { e.preventDefault(); drop.classList.add('border-blue-400', 'bg-blue-50/60'); };
+  drop.ondragleave = () => drop.classList.remove('border-blue-400', 'bg-blue-50/60');
+  drop.ondrop = async e => { e.preventDefault(); drop.classList.remove('border-blue-400', 'bg-blue-50/60'); if (busy) return; ikAdd(await ikCollectDrop(e.dataTransfer)); };
+  $('#ik-fixed').onchange = e => { IK.fixed = e.target.value; IK.rows.forEach(r => { if (r.st !== 'saved' && !r.err) { r.manual = false; ikRefresh(r); r.sel = !!r.key && !r.dup; } }); renderIntakeTab(); };
+  const only = $('#ik-only'); if (only) only.onchange = () => { IK.only = only.checked; renderIntakeTab(); };
+  const clr = $('#ik-clear'); if (clr) clr.onclick = () => {
+    const saved = IK.rows.filter(r => r.st === 'saved').length;
+    if (saved && saved < IK.rows.length) IK.rows = IK.rows.filter(r => r.st !== 'saved');
+    else { if (IK.rows.some(r => r.st !== 'saved') && !confirm('목록을 비울까요? (저장 안 한 파일은 다시 넣어야 해요)')) return; IK.rows = []; }
+    renderIntakeTab(); };
+  const save = $('#ik-save'); if (save) save.onclick = ikSave;
+  const row = id => IK.rows.find(r => r.id === id);
+  $('#tab').querySelectorAll('[data-ik-sel]').forEach(c => c.onchange = () => { row(c.dataset.ikSel).sel = c.checked; renderIntakeTab(); });
+  $('#tab').querySelectorAll('[data-ik-emp]').forEach(s => s.onchange = () => { const r = row(s.dataset.ikEmp); r.key = s.value; r.manual = true; r.dup = !!ikDupOf(r); r.sel = !!r.key && !r.dup; renderIntakeTab(); });
+  $('#tab').querySelectorAll('[data-ik-cat]').forEach(s => s.onchange = () => { const r = row(s.dataset.ikCat); r.cat = s.value; r.catWhy = '지정'; renderIntakeTab(); });
+  $('#tab').querySelectorAll('[data-ik-see]').forEach(b => b.onclick = () => { const r = row(b.dataset.ikSee); openPreview(r.name, `${r.path} · ${fmtSize(r.size)}`, r.file.type ? r.file : new Blob([r.file], {type: mimeOf(r.file)})); });
+  icons();
 }
 const fmtDT = t => { if (!t) return ''; const d = new Date(t + 9*3600e3); return d.toISOString().slice(0,16).replace('T',' '); };
 function surveySheetHtml(p){
