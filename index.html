@@ -97,6 +97,7 @@
           <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700">모바일 연결</span>
           <h3 class="text-lg font-extrabold text-slate-900 mt-1.5">국세청 손택스 연결</h3>
           <p class="text-xs text-slate-500 mt-0.5">모바일에서는 손택스 앱 또는 모바일 웹으로 간편하게 이용할 수 있어요.</p>
+          <p id="sontax-path" class="hidden mt-2 text-xs sm:text-sm bg-blue-50 border border-blue-200 text-blue-700 rounded-2xl px-4 py-3"></p>
         </div>
         <button type="button" data-close-modal="sontax-modal" class="p-1.5 text-slate-400 hover:text-slate-700 rounded-full" aria-label="닫기">
           <i data-lucide="x" class="w-5 h-5"></i>
@@ -182,7 +183,7 @@
   </div>
 
 <script type="module">
-const APP_BUILD = '26_11_25_01';
+const APP_BUILD = '26_11_25_02';
 
 /* =====================================================================
    설정 — 여기만 고치면 됩니다
@@ -234,6 +235,8 @@ const ALLOW_MIME = ['application/pdf','image/jpeg','image/png','image/heic','ima
 /* 발급처 링크 */
 const L = {
   hometax:   {label:'홈택스', url:'https://www.hometax.go.kr'},
+  bulk:      {label:'간소화 일괄제공 동의 바로가기', url:'https://hometax.go.kr/websquare/websquare.html?w2xPath=%2Fui%2Fpp%2Findex_pp.xml&tmIdx=45&tm2lIdx=4504070000&tm3lIdx=4504070100',
+              path:'[장려금·연말정산·기부금] → [연말정산 간소화] → [연말정산 일괄제공] → [(근로자용) 일괄제공 동의/조회/취소]'},
   consent:   {label:'부양가족 자료제공 동의', url:'https://hometax.go.kr/websquare/websquare.html?w2xPath=%2Fui%2Fpp%2Findex_pp.xml&tmIdx=45&tm2lIdx=4504000000&tm3lIdx=4504020000'},
   efamily:   {label:'전자가족관계등록시스템', url:'https://efamily.scourt.go.kr'},
   gov24:     {label:'정부24', url:'https://www.gov.kr'},
@@ -248,7 +251,7 @@ const L = {
 const CATS = [
   {id:'simple', req:true, optIf:['bulk'], label:'연말정산 간소화 자료 (PDF)',
    desc:'국세청 간소화 서비스에서 받은 PDF 1개 (매년 1월 중순 오픈). 문답표 1-3)에서 간소화자료 일괄제공에 동의했다고 답하면 안 올려도 돼요',
-   links:[L.hometax, L.consent],
+   links:[L.hometax, L.bulk, L.consent],
    how:['홈택스(PC) 또는 손택스 앱에 로그인 (간편인증·공동인증서)',
         '[장려금·연말정산·기부금] → [연말정산간소화] → [소득·세액공제 자료 조회]',
         `귀속연도 ${CONFIG.year}년 확인 → [한번에 조회하기]`,
@@ -398,7 +401,7 @@ const SURVEY = [
   {sec:'s1', id:'head_nohouse', no:'(1-1)', short:'무주택 세대주', q:'무주택 세대주입니까?', hint:'분양권만 있으면 무주택으로 봐요', show: a => a.head === true},
   {sec:'s1', id:'member_nohouse', no:'(1-2)', short:'무주택 세대원', q:'세대주가 주택자금공제를 받지 않는 무주택 세대의 세대원입니까?', hint:'주택자금공제에는 주택마련저축 공제도 포함돼요. 분양권만 있으면 무주택', show: a => a.head === false},
   {sec:'s1', id:'midjoin', no:'2)', short:'중도입사', q:`${Y}년 신규 입사자이면서, ${Y}년에 전 근무지가 있습니까?`, hint:'예: 전 근무지 근로소득 원천징수영수증을 내야 해요'},
-  {sec:'s1', id:'bulk', no:'3)', short:'간소화 일괄제공 동의', q:'홈택스 「편리한 연말정산」에서 간소화자료 일괄제공에 동의했습니까?', hint:'예: 간소화 자료가 회사로 바로 와서 간소화 PDF는 안 올려도 돼요\n아니오(또는 잘 모르겠으면): 간소화 PDF를 꼭 올려 주세요'},
+  {sec:'s1', id:'bulk', no:'3)', short:'간소화 일괄제공 동의', q:'홈택스 「편리한 연말정산」에서 간소화자료 일괄제공에 동의했습니까?', hint:'예: 간소화 자료가 회사로 바로 와서 간소화 PDF는 안 올려도 돼요\n아니오(또는 잘 모르겠으면): 간소화 PDF를 꼭 올려 주세요', link:'bulk'},
   // 2. 배우자·부양가족
   {sec:'s2', id:'family', no:'1)', short:'부양가족', q:'본인 말고 배우자나 부양가족을 공제받습니까?'},
   {sec:'s2', id:'fam_req', no:'(1-1)', short:'부양가족 요건', show: a => a.family === true,
@@ -895,14 +898,16 @@ function applyDevice(){
   document.querySelectorAll('[data-dev="sub"]').forEach(el => el.textContent = m ? '모바일 · 손택스' : 'PC · 홈택스');
   icons();
 }
-function openTaxPortal(url){
+function openTaxPortal(url, path){
+  const pe = $('#sontax-path');
+  if (pe) { pe.textContent = path ? '로그인 후 ' + path + ' 메뉴로 들어가 주세요 (손택스 앱은 메뉴 이름이 조금 다를 수 있어요)' : ''; pe.classList.toggle('hidden', !path); }
   if (UI.mobile) $('#sontax-modal').classList.remove('hidden');
   else window.open(url || L.hometax.url, '_blank', 'noopener,noreferrer');
 }
 /* 홈택스 버튼, 모달 닫기는 문서 전체에서 위임 */
 document.addEventListener('click', e => {
   const t = e.target.closest('[data-tax]');
-  if (t) { e.preventDefault(); openTaxPortal(t.dataset.tax); return; }
+  if (t) { e.preventDefault(); openTaxPortal(t.dataset.tax, t.dataset.taxPath); return; }
   const c = e.target.closest('[data-close-modal]');
   if (c) { $('#' + c.dataset.closeModal).classList.add('hidden'); return; }
   if (e.target.classList.contains('modal-backdrop')) e.target.parentElement.classList.add('hidden');
@@ -1351,7 +1356,9 @@ function reqStatus(){
   const have = req.filter(c => E.uploads.some(u => u.category === c.id));
   return {req, have, missing: req.filter(c => !have.includes(c))};
 }
-const linkBtn = l => l === L.hometax
+const linkBtn = l => l === L.bulk
+  ? `<button type="button" data-tax="${esc(l.url)}" data-tax-path="${esc(l.path)}" class="inline-flex items-center gap-1.5 text-xs font-bold text-blue-700 bg-blue-50 hover:bg-blue-100 border border-blue-200 px-3 py-1.5 rounded-full transition"><span>${esc(l.label)}</span><i data-lucide="external-link" class="w-3.5 h-3.5"></i></button>`
+  : l === L.hometax
   ? `<button type="button" data-tax="${esc(l.url)}" class="inline-flex items-center gap-1.5 text-xs font-bold text-blue-700 bg-blue-50 hover:bg-blue-100 border border-blue-200 px-3 py-1.5 rounded-full transition"><span data-dev="open">홈택스 열기</span><i data-lucide="external-link" class="w-3.5 h-3.5"></i></button>`
   : l === L.consent
   ? `<button type="button" data-tax="${esc(l.url)}" class="inline-flex items-center gap-1.5 text-xs font-bold text-slate-700 bg-slate-50 hover:bg-slate-100 border border-slate-200 px-3 py-1.5 rounded-full transition"><span>${esc(l.label)}</span><i data-lucide="external-link" class="w-3.5 h-3.5"></i></button>`
@@ -1530,7 +1537,8 @@ function renderSurvey(){
     let head = '';
     if (q.sec !== lastSec) { const sc = SECTION[q.sec]; head = `<div class="mt-5 first:mt-1 mb-1 px-3 py-2 rounded-xl bg-slate-100 text-sm font-extrabold text-slate-900">${esc(sc.title)}${sc.sub ? `<span class="ml-1.5 text-xs font-medium text-slate-500">${esc(sc.sub)}</span>` : ''}</div>`; lastSec = q.sec; }
     const dot = ok ? '' : '<span class="inline-block w-1.5 h-1.5 rounded-full bg-rose-500 mr-1.5 align-middle"></span>';
-    const hint = q.hint ? `<span class="block text-xs text-slate-500 font-normal mt-1 pre-line">${esc(q.hint)}</span>` : '';
+    const hint = (q.hint ? `<span class="block text-xs text-slate-500 font-normal mt-1 pre-line">${esc(q.hint)}</span>` : '')
+      + (q.link && L[q.link] ? `<span class="block mt-2">${linkBtn(L[q.link])}</span><span class="block text-[11px] text-slate-400 font-normal mt-1">홈택스 로그인 후 ${esc(L[q.link].path)}</span>` : '');
     if (t === 'check') return head + `<div id="q-${q.id}" class="py-3 border-t border-slate-100 first:border-t-0">
       <label class="flex items-start gap-2.5 cursor-pointer rounded-2xl border ${ok ? 'border-emerald-200 bg-emerald-50/50' : 'border-slate-200 bg-slate-50/70'} p-3.5">
         <input type="checkbox" data-chk="${q.id}" ${v === true ? 'checked' : ''} class="mt-0.5 w-4 h-4 rounded border-slate-300 text-blue-600">
