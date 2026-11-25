@@ -182,7 +182,7 @@
   </div>
 
 <script type="module">
-const APP_BUILD = '26_11_24_02';
+const APP_BUILD = '26_11_25_01';
 
 /* =====================================================================
    설정 — 여기만 고치면 됩니다
@@ -1939,7 +1939,23 @@ function renderAdmin(){
   icons();
 }
 
-function keepFocus(id, fn){ const el = $('#'+id); const pos = el.selectionStart; fn(); const n = $('#'+id); n.focus(); try { n.setSelectionRange(pos,pos); } catch {} }
+// 입력 중인 칸(검색칸)은 그대로 두고 나머지만 새로 그림. 칸을 새로 만들면 한글 조합이 끊겨서 자음·모음이 따로 쳐짐.
+function setHtmlKeep(box, html, keepId){
+  const live = box.querySelector('#'+keepId);
+  if (!live || document.activeElement !== live) { box.innerHTML = html; return; }
+  const t = document.createElement('template'); t.innerHTML = html;
+  const fresh = t.content.querySelector('#'+keepId);
+  const depth = (n, top) => { let d = 0; while (n && n !== top) { n = n.parentNode; d++; } return n === top ? d : -1; };
+  if (!fresh || depth(live, box) !== depth(fresh, t.content)) { box.innerHTML = html; return; }
+  let l = live, f = fresh;
+  while (l !== box) {
+    const lp = l.parentNode, fp = f.parentNode, fk = [...fp.childNodes], i = fk.indexOf(f);
+    [...lp.childNodes].forEach(n => n !== l && n.remove());
+    l.before(...fk.slice(0, i)); l.after(...fk.slice(i + 1));
+    if (lp !== box) { [...lp.attributes].forEach(a => fp.hasAttribute(a.name) || lp.removeAttribute(a.name)); [...fp.attributes].forEach(a => lp.setAttribute(a.name, a.value)); }
+    l = lp; f = fp;
+  }
+}
 const corpSelect = (id, val, rows) => `<select id="${id}" class="${INPUT_SM}"><option value="">전체 법인</option>${uniq(rows, r => r.corp).sort(corpOrder).map(c => `<option ${c===val?'selected':''}>${esc(c)}</option>`).join('')}</select>`;
 const deptSelect = (id, val, rows) => `<select id="${id}" class="${INPUT_SM}"><option value="">전체 소속</option>${uniq(rows, r => r.dept).map(d => `<option ${d===val?'selected':''}>${esc(d)}</option>`).join('')}</select>`;
 
@@ -1985,7 +2001,7 @@ function renderStatusTab(ps){
       + cats.map(c => chip(esc(catLabel(c)))).join('') + miss.map(c => chip(`${esc(catLabel(c))} 없음`, 'miss')).join('');
   };
   const canOpen = p => p.files.length || p.sub?.memo || p.sub?.survey || p.paperAt;
-  $('#tab').innerHTML = `<section class="space-y-4">
+  setHtmlKeep($('#tab'), `<section class="space-y-4">
     ${AD.roster.length ? '' : '<div class="bg-amber-50 border border-amber-200 rounded-2xl px-4 py-3 text-sm font-semibold text-amber-800">근로자 명단이 비어 있어요. "근로자 명단" 탭에서 엑셀을 먼저 올려주세요.</div>'}
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
       <input id="q" type="text" placeholder="이름·사번·소속·생년월일 검색" value="${esc(AD.q)}" class="${INPUT_SM}">
@@ -2058,12 +2074,12 @@ function renderStatusTab(ps){
         </div>
         ${open ? `<div class="pt-2 border-t border-slate-100">${adminDetail(p)}</div>` : ''}
       </div>`; }).join('') : '<div class="bg-white rounded-2xl p-8 text-center text-sm text-slate-400 border border-slate-200">조건에 맞는 근로자가 없습니다.</div>'}</div>
-  </section>`;
+  </section>`, 'q');
   const tab = $('#tab');
   const chkAll = $('#chk-all'); chkAll.checked = list.length > 0 && list.every(p => AD.sel.has(p.key));
   chkAll.onchange = () => { list.forEach(p => chkAll.checked ? AD.sel.add(p.key) : AD.sel.delete(p.key)); renderStatusTab(ps); };
   tab.querySelectorAll('[data-sel]').forEach(c => c.onchange = () => { c.checked ? AD.sel.add(c.dataset.sel) : AD.sel.delete(c.dataset.sel); renderStatusTab(ps); });
-  $('#q').oninput = e => { AD.q = e.target.value; keepFocus('q', () => renderStatusTab(ps)); };
+  $('#q').oninput = e => { AD.q = e.target.value; renderStatusTab(ps); };
   $('#fcorp').onchange = e => { AD.corp = e.target.value; AD.dept = ''; renderAdmin(); };
   $('#fdept').onchange = e => { AD.dept = e.target.value; renderStatusTab(ps); };
   $('#fst').onchange = e => { AD.st = e.target.value; renderStatusTab(ps); };
@@ -2211,7 +2227,7 @@ function renderRosterTab(){
   const ipw = AD.settings.initialPw || '';
   const box = 'bg-white rounded-2xl p-5 border border-slate-200/80 shadow-sm';
   const pwChip = r => `<span class="text-[11px] font-bold px-2 py-0.5 rounded-md ${r.mustChange ? 'bg-blue-50 text-blue-700' : 'bg-emerald-50 text-emerald-700'}">${r.mustChange ? '임시' : '직접 설정'}</span>`;
-  $('#tab').innerHTML = `<section class="space-y-5">
+  setHtmlKeep($('#tab'), `<section class="space-y-5">
     <div class="${box}">
       <h3 class="text-base font-extrabold text-slate-900">임시 비밀번호</h3>
       <p class="text-xs text-slate-500 mt-1 mb-3">명단에 새로 추가되는 직원과 비밀번호를 초기화한 직원은 이 비밀번호로 로그인해요. 직원이 원하면 로그인 후 직접 바꿀 수 있어요.</p>
@@ -2271,7 +2287,7 @@ function renderRosterTab(){
             <button type="button" data-rdel="${esc(r.key)}" class="text-xs font-bold px-3.5 py-2 rounded-lg border border-rose-200 bg-white text-rose-600">삭제</button></div>
         </div>`).join('') : `<div class="py-8 text-center text-sm text-slate-400">${AD.roster.length ? '검색 결과가 없어요' : '등록된 근로자가 없어요. 엑셀을 올려주세요.'}</div>`}</div>
     </div>
-  </section>`;
+  </section>`, 'rq');
   $('#ipw-save').onclick = async () => {
     const v = $('#ipw').value.trim();
     if (v.length < CONFIG.pwMinLen) return toast(`임시 비밀번호는 ${CONFIG.pwMinLen}자 이상으로 정해 주세요`);
@@ -2289,7 +2305,7 @@ function renderRosterTab(){
     $('#tpl').onclick = downloadTemplate;
     $('#rexp').onclick = exportRoster;
   }
-  $('#rq').oninput = e => { AD.rq = e.target.value; keepFocus('rq', renderRosterTab); };
+  $('#rq').oninput = e => { AD.rq = e.target.value; renderRosterTab(); };
   $('#rcorp').onchange = e => { AD.rcorp = e.target.value; AD.rdept = ''; renderRosterTab(); };
   $('#rdept').onchange = e => { AD.rdept = e.target.value; renderRosterTab(); };
   $('#a-birth').oninput = e => e.target.value = digits(e.target.value).slice(0,6);
